@@ -1,0 +1,148 @@
+@import url(style.css);
+
+/* ---------.........Inicio de estilos seccion de proyectos........-------------- */
+.testimonial-carousel
+.donacion-proyecto-seccion,
+.corporativo-section {
+    width: 100%;
+}
+
+.proyecto-titulo {
+    margin-top: 2rem;
+    font-size: 30px;
+    color: #020873;
+}
+
+.proyecto-descriptivo {
+    color: #000000;
+    font-size: 25px;
+}
+
+.deportivo-subtitulo,
+.social-subtitulo,
+.cultural-subtitulo {
+    font-size: 15px;
+    color: #000000;
+}
+
+.testimonio-titulo,
+.cultural-titulo,
+.social-titulo,
+.galeria-cultural-titulo,
+.galeria-deportiva-titulo,
+.galeria-social-titulo,
+.deportivo-titulo {
+    margin-top: 15px;
+    font-size: 25px;
+    color: #020873;
+}
+
+.cultural-subtitulo .social-subtitulo .deportivo-subtitulo {
+    margin: 20px 0;
+    font-size: 15px;
+    color: #000000;
+}
+
+hr {
+    color: #020873;
+}
+
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+  
+
+/* ------------------------------Fin de estilos seccion de proyectos---------------------------------- */
+
+/* --------------------------------------Inicio de Estilos Donación Seccion ---------------------------*/
+.donacion-proyecto-seccion {
+    margin-top: 2rem;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.donacion-proyecto-titulo {
+    text-align: center;
+    font-size: 25px;
+    color: #020873;
+    margin-bottom: 20px
+}
+
+.donacion-proyecto-subtitulo {
+    text-align: center;
+    font-size: 15px;
+    color: #000000;
+}
+
+.boton-donacion-proyecto {
+    font-size: 15px;
+    border: none;
+    background-color: #F4C128;
+    color: #000000;
+    border-radius: 30px;
+    padding: 15px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.boton-donacion-proyecto:hover {
+    cursor: pointer;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #4cbb5f;
+    transition: 0.3s;
+}
+
+.icono-donacion-proyecto {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* -----------------------------------Fin de Estilos Donación Seccion------------------------------------- */
+
+/* ---------------------------------Estilos para el carrusel de testimonios --------------------------------*/
+.testimonial-carousel {
+    background-color: #FFFFFF;
+    padding: 20px 0;
+}
+
+.testimonial-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.testimonial-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    color: #000000;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    color: #020873;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* -----------------------------Fin de Estilos para el carrusel de testimonios --------------------------------*/

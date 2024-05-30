@@ -1,0 +1,56 @@
+/* --------------------Inicio Barra de Redes Sociales------------------------ */
+.social-redes {
+    position: fixed;
+    top: 50%;
+    /* Ubicación de la barra en la pantalla */
+    left: -3px;
+    /* Posición horizontal */
+    z-index: 1000;
+    transform: translateY(-50%);
+}
+
+.redes-sociales-boton {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    padding: 2px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    /* Uso de RGBA para transparencia */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: margin-left 0.3s ease-in-out;
+    /* Cambiar a una transición específica */
+    position: relative;
+}
+
+.redes-sociales-logo {
+    font-size: 20px;
+    color: #fff;
+}
+
+.red-social-facebook {
+    background-color: #1B81E2;
+}
+
+.red-social-whatsapp {
+    background-color: #25D366;
+}
+
+.red-social-instagram {
+    background-color: #fd0bbe;
+}
+
+.red-social-youtube {
+    background-color: #f00;
+}
+
+
+.redes-sociales-boton:hover {
+    margin-left: 10px;
+}
+
+
+/* --------------------Fin Barra de Redes Sociales------------------------ */

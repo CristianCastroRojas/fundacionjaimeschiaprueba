@@ -1,0 +1,123 @@
+/* -----------------------Inicio de Estilos para Banner Swiper----------------------- */
+.swiper {
+    margin-top: 2px;
+    width: 100%;
+    height: 600px;
+}
+
+.swiper-slide video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.6);
+}
+
+/* Contenedor de texto en cada diapositiva */
+.swiper .slide-text {
+    position: relative;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 90%; /* Ajusta el ancho máximo del contenedor de texto */
+    text-align: center;
+    color: #FFFFFF;
+    z-index: 10;
+    padding: 40px;
+    margin: 20px 0;
+}
+
+/* Estilos para el título del slide */
+.swiper .slide-text h2 {
+    font-size: 3vw;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el párrafo del slide */
+.swiper .slide-text p {
+    font-size: 1.5vw;
+    margin-bottom: 0;
+}
+
+/* Clase de animacion para imagenes de banner */
+.kenburns-top {
+    animation: kenburns-top 15s ease-out both;
+}
+
+@keyframes kenburns-top {
+    0% {
+        transform: scale(1) translateY(0);
+        transform-origin: 50% 16%;
+    }
+
+    100% {
+        transform: scale(1.25) translateY(-15px);
+        transform-origin: top;
+    }
+}
+
+/* Estilo de los botones de navegación */
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+    --swiper-navigation-size: 30px;
+    height: 40px;
+    width: 40px;
+    top: 55%;
+    /* Centra verticalmente el botón */
+    transform: translateY(-50%);
+    color: #E10000;
+    /* Color rojo */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo oscuro con transparencia */
+    z-index: 1;
+    /* Botones sobre el contenido */
+    border-radius: 50%;
+    /* Forma redonda de los botones */
+    padding: 5px;
+    /* Espacio alrededor del ícono */
+    opacity: 0;
+    /* Opacidad inicial */
+    transition: opacity 0.3s;
+    /* Transición de opacidad */
+}
+
+/* Botón de navegación izquierdo */
+.swiper .swiper-button-prev {
+    left: -10px;
+    border-radius: 0 65px 65px 0;
+}
+
+/* Botón de navegación derecho */
+.swiper .swiper-button-next {
+    right: -10px;
+    border-radius: 65px 0 0 65px;
+}
+
+/* Muestra los botones al pasar el cursor */
+.swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-button-next {
+    opacity: 1;
+}
+
+/* Ajustes para la paginación del swiper */
+.swiper .swiper-pagination {
+    --swiper-pagination-color: #2793F2;
+    /* Color azul */
+    --swiper-pagination-bullet-size: 20px;
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
+    --swiper-pagination-bullet-inactive-color: #E10000;
+    --swiper-pagination-bullet-inactive-opacity: 0.3;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 6px;
+}
+
+/* .swiper .swiper-pagination-bullet {
+    border: 1px solid black;
+} */
+
+/* ----------------------Fin de Estilos para Banner Swiper---------------------------------- */

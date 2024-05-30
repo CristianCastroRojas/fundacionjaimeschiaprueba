@@ -1,0 +1,223 @@
+@import url(style.css);
+
+/* -----------------------inicio de Estilos Hastag Sesion 1---------------------------------- */
+.hastag-seccion {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #FF0000;
+    color: #FFFFFF;
+}
+
+.hastag-seccion p {
+    font-size: 3vw;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+/* ------------------------Fin de Estilos Hastag Sesion 1------------------------------------- */
+
+/* -------------------Inicio de Estilos Informacion Seccion------------------------------------ */
+.informacion-sesion {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.informacion-img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 30px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 10);
+}
+
+.informacion-titulo {
+    font-size: 25px;
+    color: #020873;
+}
+
+.informacion-parrafo {
+    font-size: 15px;
+    color: #000000;
+}
+
+.boton-informacion {
+    font-size: 15px;
+    border: none;
+    background-color: #2793F2;
+    color: #000000;
+    border-radius: 30px;
+    padding: 15px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.boton-informacion:hover {
+    cursor: pointer;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #4cbb5f;
+    transition: 0.3s;
+}
+
+/* --------------------Fin de Estilos Informacion Seccion--------------------------------- */
+
+/* -------------------Inicio de Estilos Impacto Seccion----------------------------------- */
+.impacto-seccion {
+    background-color: #f8f9fa;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.impacto-titulo {
+    color: #020873;
+    font-size: 30px;
+}
+
+.impacto-subtitulo {
+    font-size: 20px;
+    color: #000000;
+}
+
+.impacto-icono {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    background-color: #2793F2;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.impacto-texto-icono {
+    font-size: 15px;
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.impacto-counter{
+    font-size: 30px;
+    font-weight: 600;
+}
+/* --------------------------------------Fin de Estilos Impacto Seccion------------------------------ */
+
+/* --------------------------------------Inicio de Estilos Donación Seccion ---------------------------*/
+.donacion-seccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.donacion-titulo {
+    text-align: center;
+    font-size: 25px;
+    color: #020873;
+    margin-bottom: 20px
+}
+
+.donacion-subtitulo {
+    text-align: center;
+    font-size: 15px;
+    color: #000000;
+}
+
+.boton-donacion {
+    font-size: 15px;
+    border: none;
+    background-color: #F4C128;
+    color: #000000;
+    border-radius: 30px;
+    padding: 15px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.boton-donacion:hover {
+    cursor: pointer;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #4cbb5f;
+    transition: 0.3s;
+}
+
+.icono-donacion {
+    font-size: 20px;
+    margin-right: 5px;/
+}
+
+/* -----------------------------------Fin de Estilos Donación Seccion------------------------------------- */
+
+/* ----------------------------------Inicio de Estilos Noticias Seccion------------------------------------ */
+.noticias-seccion {
+    margin-top: 10px;
+    background-color: #2793F2;
+    padding: 10px;
+}
+
+.noticias-imagenes {
+    width: 100%;
+    height: 200px;
+}
+
+.noticias-seccion .card-body {
+    position: relative;
+    min-height: 150px;
+}
+
+.noticias-seccion .text-body-secondary {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.noticias-titulo-seccion {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.noticias-titulo {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.noticias-subtitulo {
+    color: #000000;
+    font-size: 12px;
+}
+
+.boton-noticias {
+    font-size: 12px;
+    border: none;
+    background-color: #2793F2;
+    color: #FFFFFF;
+    border-radius: 30px;
+    padding: 8px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.boton-noticias:hover {
+    cursor: pointer;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #4cbb5f;
+    transition: 0.3s;
+}
+
+.card-text {
+    margin-top: 40px;
+    font-size: 12px;
+}
+
+.card{
+    margin-right: 10px;
+}
+
+/* ------------------------------------Fin de Estilos Noticias Seccion-------------------------- */

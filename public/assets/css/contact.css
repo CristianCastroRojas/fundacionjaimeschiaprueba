@@ -1,0 +1,114 @@
+@import url(style.css);
+
+/* -----------------Inicio de estilos para seccion de Contacto------------------ */
+
+.contact-section{
+    background-color: #fff;
+    width: 100%;
+}
+
+.contacto-titulo{
+    margin-top: 2rem;
+    font-size: 30px;
+    color: #020873;
+}
+
+.contacto-descriptivo{
+    font-size: 25px;
+    color: #000000;
+}
+
+.donacion-info-titulo,
+.contacto-info-titulo{
+    color: #020873;
+    font-size: 25px;
+}
+
+.contact-info-parrafo,
+.donacion-info-parrafo{
+    font-size: 15px;
+    color: #000000;
+}
+
+.donacion-info-img{
+    width: 100%;
+    height: 500px;
+}
+
+.contact-info-parrafo a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.contact-info-parrafo i{
+    font-size: 15px;
+    align-items: center;
+    color: #2793F2;
+}
+
+.contact-form {
+    margin-top: 2rem;
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact-form h3 {
+    font-size: 25px;
+    color: #020873;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    color: #020873;
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-check-label {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2793F2;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 10);
+    font-size: 15px;
+}
+
+.contact-form button:hover {
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #4cbb5f;
+    transition: 0.3s;
+}
+
+
+/* ------------------Fin de estilos para seccion de Contacto-------------------------- */

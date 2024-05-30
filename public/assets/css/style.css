@@ -1,0 +1,1036 @@
+/* -----------------Google Fonts------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* -----------------General------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------Fuente de Cuerpo---------- */
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* *************************************MediaQuerys Responsive********************************************* */
+
+/* ----------------Estilos para pantallas pequeñas----------------- */
+@media screen and (max-width: 768px) {
+
+    /* Ajustes para el componente de barra de navegación */
+
+    .navbar-brand {
+        margin-left: 10px;
+        margin-right: auto;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 10px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .offcanvas-header {
+        padding: 10px 15px;
+    }
+
+    .offcanvas-body {
+        padding: 0 15px;
+    }
+
+    /* Ajustes para el componente de baner o swiper */
+
+    .swiper {
+        height: 400px;
+    }
+
+    .swiper .slide-text {
+        bottom: 30%;
+        padding: 20px;
+    }
+
+    .swiper .slide-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .swiper .slide-text p {
+        font-size: 1rem;
+    }
+
+    .swiper .swiper-button-next,
+    .swiper .swiper-button-prev {
+        display: none;
+    }
+
+    /* Ajustes para el componente de redes sociales */
+
+    /* Ajustes para el componente de curso arriba */
+    #scroll-arrow-componente .scroll-arrow .arrow,
+    .redes-sociales-boton {
+        width: 38px;
+        height: 38px;
+        margin-top: 5px;
+    }
+
+    #scroll-arrow-componente .scroll-arrow .arrow i {
+        font-size: 20px;
+    }
+
+    .redes-sociales-logo {
+        font-size: 18px;
+    }
+
+    /* Ajustes para el componente de pie de pagina o footer */
+
+    .footer-seccion .footer-titulo {
+        font-size: 25px;
+    }
+
+    .footer-seccion .footer-subtitulo,
+    .footer-seccion .footer-enlace,
+    .footer-seccion .footer-contenido {
+        font-size: 18px;
+    }
+
+    .footer-seccion .footer-derechos {
+        font-size: 10px;
+    }
+
+    /* Ajustes para la pagina de inicio sesion hastag */
+
+    .hastag-seccion p {
+        font-size: 4vw;
+    }
+
+    /* Ajustes para la pagina de inicio sesion información */
+
+    .informacion-sesion .informacion-img {
+        max-width: 90%;
+    }
+
+    .informacion-sesion .informacion-titulo {
+        font-size: 25px;
+    }
+
+    .informacion-sesion .informacion-parrafo {
+        font-size: 18px;
+    }
+
+    .informacion-sesion .boton-informacion,
+    .informacion-sesion .boton-donacion,
+    .informacion-sesion .boton-noticias {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+
+    /* Ajustes para la pagina de inicio sesion impacto */
+
+    .impacto-seccion .impacto-titulo {
+        font-size: 25px;
+    }
+
+    .impacto-seccion .impacto-subtitulo {
+        font-size: 18px;
+    }
+
+    .impacto-seccion .impacto-icono {
+        font-size: 25px;
+        padding: 25px;
+    }
+
+    .impacto-seccion .impacto-texto-icono {
+        font-size: 18px;
+    }
+
+    .impacto-seccion .impacto-counter {
+        font-size: 30px;
+    }
+
+    /* Ajustes para la pagina de inicio sesion donación */
+
+    .donacion-seccion .donacion-titulo {
+        font-size: 25px;
+    }
+
+    .donacion-seccion .donacion-subtitulo {
+        font-size: 18px;
+    }
+
+    .donacion-seccion .icono-donacion {
+        font-size: 25px;
+    }
+
+    /* Ajustes para la pagina de inicio sesion noticias */
+
+    .noticias-seccion .noticias-titulo-seccion {
+        font-size: 35px;
+    }
+
+    .noticias-seccion .noticias-titulo {
+        font-size: 15px;
+    }
+
+    .noticias-seccion .boton-noticias {
+        font-size: 12px;
+        padding: 10px 10px;
+    }
+
+    /* Ajustes para la pagina de conocenos sesion corporativo y equipo*/
+
+    .corporativo-section,
+    .equipo-seccion {
+        padding: 0px 20px;
+    }
+
+    .corporativo-section #video-container video {
+        height: 80%;
+    }
+
+    .corporativo-section .corporativo-titulo {
+        font-size: 25px;
+    }
+
+    .corporativo-section .corporativo-descriptivo {
+        font-size: 20px;
+    }
+
+    .equipo-seccion .equipo-subtitulo,
+    .corporativo-section .corporativo-subtitulo {
+        font-size: 25px;
+    }
+
+    .corporativo-section .corporativo-texto {
+        font-size: 18px;
+    }
+
+    .corporativo-section .corporativo-img {
+        height: 400px;
+    }
+
+    .corporativo-section .corporativo-valores-titulo {
+        font-size: 25px;
+    }
+
+    .corporativo-section .corporativo-valores-subtitulo {
+        font-size: 18px;
+    }
+
+    .corporativo-section .corporativo-icon {
+        font-size: 40px;
+        padding: 25px;
+    }
+
+    .corporativo-section .corporativo-icon:hover {
+        font-size: 60px;
+    }
+
+    .equipo-seccion .equipo-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .equipo-seccion .equipo-nombre {
+        font-size: 25px;
+    }
+
+    .equipo-seccion .equipo-cargo {
+        font-size: 18px;
+    }
+
+    /* Ajustes para la pagina de nuestros proyectos */
+
+    .proyecto-section,
+    .donacion-proyecto-seccion,
+    .testimonial-carousel {
+        padding: 0 20px;
+    }
+
+    .proyecto-section .proyecto-titulo {
+        font-size: 25px;
+    }
+
+    .proyecto-section .proyecto-descriptivo {
+        font-size: 18px;
+    }
+
+    .proyecto-section .deportivo-subtitulo,
+    .proyecto-section .social-subtitulo,
+    .proyecto-section .cultural-subtitulo {
+        font-size: 18px;
+    }
+
+    .proyecto-section .galeria-deportiva-titulo,
+    .proyecto-section .galeria-social-titulo,
+    .proyecto-section .galeria-cultural-titulo,
+    .proyecto-section .deportivo-titulo,
+    .proyecto-section .social-titulo,
+    .proyecto-section .cultural-titulo,
+    .testimonial-carousel .testimonio-titulo {
+        font-size: 25px;
+    }
+
+    .proyecto-section .gallery-item img {
+        height: 150px;
+    }
+
+    .proyecto-section .gallery-item img:hover {
+        transform: none;
+    }
+
+    .donacion-proyecto-seccion .donacion-proyecto-titulo {
+        font-size: 25px;
+    }
+
+    .donacion-proyecto-seccion .donacion-proyecto-subtitulo {
+        font-size: 18px;
+    }
+
+    .donacion-proyecto-seccion .boton-donacion-proyecto {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+
+    /* Ajustes para la pagina de conocenos sesion testimonios*/
+
+    .testimonial-carousel .testimonial-text {
+        font-size: 18px;
+    }
+
+    .testimonial-carousel .testimonial-author {
+        font-size: 15px;
+    }
+
+    .testimonial-carousel .testimonial-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Ajustes para la pagina de blog */
+
+    .blog-seccion {
+        padding: 0 20px;
+    }
+
+    .blog-seccion .blog-titulo {
+        font-size: 25px;
+    }
+
+    .blog-seccion .blog-subtitulo {
+        font-size: 18px;
+    }
+
+    /* Ajustes de estilo para la barra de filtros */
+    .blog-seccion .col-md-8 {
+        display: flex;
+        /* Utilizar flexbox */
+        justify-content: center;
+        /* Centrar horizontalmente los elementos */
+        align-items: center;
+        /* Alinear verticalmente los elementos */
+        margin-bottom: 20px;
+    }
+
+    /* Ajustes de estilo para la barra de búsqueda */
+    .blog-seccion .col-md-4 {
+        display: flex;
+        /* Utilizar flexbox */
+        justify-content: center;
+        /* Centrar horizontalmente los elementos */
+        align-items: center;
+        /* Alinear verticalmente los elementos */
+    }
+
+    .blog-seccion #search-input {
+        width: 250px;
+    }
+
+    .blog-seccion .filtro {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+
+    .blog-seccion .card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .blog-seccion .card img {
+        height: 200px;
+        max-height: 250px;
+        width: 100%;
+    }
+
+    .blog-seccion .card-title {
+        font-size: 18px;
+    }
+
+    .card-footer .btn {
+        margin-right: -5px;
+        padding: 8px 15px;
+    }
+
+    .blog-seccion .card-text,
+    .blog-seccion .descripcion {
+        font-size: 13px;
+    }
+
+    .blog-seccion .mostrar-descripcion {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .blog-seccion .mostrar-descripcion:hover {
+        font-size: 14px;
+        background-color: #2793F2;
+    }
+
+    /* Ajustes para la pagina de contacto */
+
+    .contact-section .contacto-titulo {
+        font-size: 25px;
+    }
+
+    .contact-section .contacto-descriptivo {
+        font-size: 18px;
+    }
+
+    .contact-section .donacion-info-titulo,
+    .contact-section .contacto-info-titulo {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .contact-section .contact-info-parrafo,
+    .contact-section .donacion-info-parrafo {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .contact-section .col-lg-6 iframe,
+    .contact-section .col-lg-6 img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+        height: 400px;
+    }
+
+    .contact-section ul li {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .contact-section .contact-form {
+        padding: 20px;
+    }
+
+    .contact-section .contact-form h3 {
+        font-size: 25px;
+    }
+
+    .contact-section .contact-form label,
+    .contact-section .contact-form input[type="text"],
+    .contact-section .contact-form input[type="email"],
+    .contact-section .contact-form input[type="tel"],
+    .contact-section .contact-form select,
+    .contact-section .contact-form textarea,
+    .contact-section .contact-form .form-check-label,
+    .contact-section .contact-form button {
+        font-size: 18px;
+    }
+
+    .contact-section .contact-form button {
+        display: block;
+        margin: 0 auto;
+        padding: 12px 25px;
+        font-size: 18px;
+    }
+
+    /* Ajustes para el boton de donacion flotante */
+    .donacion-flotante .donacion-flotante-boton {
+        font-size: 14px;
+        padding: 12px 25px;
+    }
+
+    .donacion-flotante .donacion-flotante-boton:hover {
+        font-size: 14px;
+        color: #000000;
+        background-color: #F4C128;
+    }
+
+    /* Ajustes para el boton de accesibilidad */
+    .discapcidad #accessibility-button {
+        width: 38px;
+        height: 38px;
+    }
+
+    .discapcidad #accessibility-button i {
+        font-size: 18px;
+    }
+
+
+    .discapcidad .accessibility-panel button {
+        font-size: 14px;
+    }
+
+    .discapcidad .accessibility-panel button i {
+        font-size: 10px;
+        margin-right: 6px;
+    }
+
+    .discapcidad .accessibility-panel button span {
+        font-size: 10px;
+        margin-left: 6px;
+    }
+
+    .discapcidad .accessibility-panel.active {
+        right: 0;
+    }
+
+    .discapcidad #accessibility-button.active {
+        right: 165px;
+    }
+
+}
+
+
+
+/* ----------------Estilos para pantallas pequeñas----------------- */
+@media screen and (max-width: 576px) {
+
+    /* Ajustes para el componente de barra de navegación */
+    .navbar-brand {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 10px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .offcanvas-header {
+        padding: 10px 15px;
+    }
+
+    .offcanvas-body {
+        padding: 0 15px;
+    }
+
+    /* Ajustes para el componente de baner o swiper */
+
+    .swiper {
+        height: 300px;
+    }
+
+    .swiper .slide-text {
+        bottom: 30%;
+        padding: 15px;
+    }
+
+    .swiper .slide-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .swiper .slide-text p {
+        font-size: 0.8rem;
+    }
+
+    .swiper .swiper-button-next,
+    .swiper .swiper-button-prev {
+        display: none;
+    }
+
+    .swiper .swiper-pagination {
+        display: none;
+    }
+
+    /* Ajustes para el componente de redes sociales */
+
+    #scroll-arrow-componente .scroll-arrow .arrow,
+    .redes-sociales-boton {
+        width: 30px;
+        height: 30px;
+        margin-top: 5px;
+    }
+
+    #scroll-arrow-componente .scroll-arrow .arrow i {
+        font-size: 14px;
+    }
+
+    .redes-sociales-logo {
+        font-size: 14px;
+    }
+
+    /* Ajustes para el componente de pie de pagina o footer */
+
+    .footer-seccion .footer-titulo {
+        font-size: 20px;
+    }
+
+    .footer-seccion .footer-subtitulo,
+    .footer-seccion .footer-enlace,
+    .footer-seccion .footer-contenido {
+        font-size: 14px;
+
+    }
+
+    .footer-seccion .footer-derechos {
+        font-size: 10px;
+    }
+
+    /* Ajustes para la pagina de inicio sesion hastag */
+
+    .hastag-seccion p {
+        font-size: 5vw;
+    }
+
+    /* Ajustes para la pagina de inicio sesion informacion */
+
+    .informacion-sesion .informacion-img {
+        max-width: 90%;
+    }
+
+    .informacion-sesion .informacion-titulo {
+        font-size: 20px;
+    }
+
+    .informacion-sesion .informacion-parrafo {
+        font-size: 14px;
+    }
+
+    .informacion-sesion .boton-informacion,
+    .informacion-sesion .boton-donacion,
+    .informacion-sesion .boton-noticias {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    /* Ajustes para la pagina de inicio sesion impacto */
+
+    .impacto-seccion .impacto-titulo {
+        font-size: 20px;
+    }
+
+    .impacto-seccion .impacto-subtitulo {
+        font-size: 14px;
+    }
+
+    .impacto-seccion .impacto-icono {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .impacto-seccion .impacto-texto-icono {
+        font-size: 14px;
+    }
+
+    .impacto-seccion .impacto-counter {
+        font-size: 25px;
+    }
+
+    /* Ajustes para la pagina de inicio sesion donacion */
+
+    .donacion-seccion .donacion-titulo {
+        font-size: 20px;
+    }
+
+    .donacion-seccion .donacion-subtitulo {
+        font-size: 14px;
+    }
+
+    .donacion-seccion .icono-donacion {
+        font-size: 20px;
+    }
+
+    /* Ajustes para la pagina de inicio sesion noticias */
+
+    .noticias-seccion .noticias-titulo-seccion {
+        font-size: 25px;
+    }
+
+    .noticias-seccion .noticias-titulo {
+        font-size: 14px;
+    }
+
+    .noticias-seccion .boton-noticias {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    /* Ajustes para la pagina de conocenos sesion corporativo y equipo */
+
+    .corporativo-section,
+    .equipo-seccion {
+        padding: 0px 20px;
+    }
+
+    .corporativo-section #video-container video {
+        height: 90%;
+    }
+
+    .corporativo-section .corporativo-titulo {
+        font-size: 20px;
+    }
+
+    .corporativo-section .corporativo-descriptivo {
+        font-size: 14px;
+    }
+
+    .equipo-seccion .equipo-subtitulo,
+    .corporativo-section .corporativo-subtitulo {
+        font-size: 20px;
+    }
+
+    .corporativo-section .corporativo-texto {
+        font-size: 14px;
+    }
+
+    .corporativo-section .corporativo-img {
+        height: 260px;
+    }
+
+    .corporativo-section .corporativo-valores-titulo {
+        font-size: 18px;
+    }
+
+    .corporativo-section .corporativo-valores-subtitulo {
+        font-size: 12px;
+    }
+
+    .corporativo-section .corporativo-icon {
+        font-size: 30px;
+
+    }
+
+    .corporativo-section .corporativo-icon:hover {
+        font-size: 40px;
+    }
+
+    .equipo-seccion .equipo-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .equipo-seccion .equipo-nombre {
+        font-size: 20px;
+    }
+
+    .equipo-seccion .equipo-cargo {
+        font-size: 14px;
+    }
+
+    /* Ajustes para la pagina de nuestros proyectos */
+
+    .proyecto-section,
+    .donacion-proyecto-seccion,
+    .testimonial-carousel {
+        padding: 0 20px;
+    }
+
+    .proyecto-section .proyecto-titulo {
+        font-size: 20px;
+    }
+
+    .proyecto-section .proyecto-descriptivo {
+        font-size: 14px;
+    }
+
+    .proyecto-section .deportivo-subtitulo,
+    .proyecto-section .social-subtitulo,
+    .proyecto-section .cultural-subtitulo {
+        font-size: 14px;
+    }
+
+    .proyecto-section .galeria-deportiva-titulo,
+    .proyecto-section .galeria-social-titulo,
+    .proyecto-section .galeria-cultural-titulo,
+    .proyecto-section .deportivo-titulo,
+    .proyecto-section .social-titulo,
+    .proyecto-section .cultural-titulo,
+    .testimonial-carousel .testimonio-titulo {
+        font-size: 20px;
+    }
+
+    .proyecto-section .gallery-item img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .proyecto-section .gallery-item img:hover {
+        transform: none;
+    }
+
+    /* Ajustes para la pagina de nuestros proyectos sesion donación */
+
+    .donacion-proyecto-seccion .donacion-proyecto-titulo {
+        font-size: 20px;
+    }
+
+    .donacion-proyecto-seccion .donacion-proyecto-subtitulo {
+        font-size: 14px;
+    }
+
+    .donacion-proyecto-seccion .boton-donacion-proyecto {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    /* Ajustes para la pagina de nuestros proyectos sesion testimonios */
+
+    .testimonial-carousel .testimonial-text {
+        font-size: 12px;
+    }
+
+    .testimonial-carousel .testimonial-author {
+        font-size: 11px;
+    }
+
+    .testimonial-carousel .testimonial-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Ajustes para la pagina de blog */
+
+    .blog-seccion {
+        padding: 0 20px;
+    }
+
+    .blog-seccion .blog-titulo {
+        font-size: 20px;
+    }
+
+    .blog-seccion .blog-subtitulo {
+        font-size: 14px;
+    }
+
+    .blog-seccion #search-input {
+        width: 250px;
+    }
+
+    /* Ajustes de estilo para la barra de filtros */
+    .blog-seccion .col-md-8 {
+        display: flex;
+        /* Utilizar flexbox */
+        justify-content: center;
+        /* Centrar horizontalmente los elementos */
+        align-items: center;
+        /* Alinear verticalmente los elementos */
+    }
+
+    /* Ajustes de estilo para la barra de búsqueda */
+    .blog-seccion .col-md-4 {
+        margin-top: 20px;
+        display: flex;
+        /* Utilizar flexbox */
+        justify-content: center;
+        /* Centrar horizontalmente los elementos */
+        align-items: center;
+        /* Alinear verticalmente los elementos */
+    }
+
+    .blog-seccion .filtro {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .blog-seccion .card {
+        max-width: 450px;
+        /* Establecer un ancho máximo para las tarjetas */
+        margin: 0 auto;
+        /* Centrar las tarjetas horizontalmente */
+    }
+
+    .blog-seccion .card img {
+        height: 250px;
+        max-height: 300px;
+        width: 100%;
+    }
+
+    .blog-seccion .card-title {
+        font-size: 14px;
+    }
+
+    .blog-seccion .card-footer .btn {
+        margin-right: -10px;
+        padding: 8px 15px;
+    }
+
+    .blog-seccion .card-text,
+    .blog-seccion .descripcion {
+        font-size: 12px;
+    }
+
+    .blog-seccion .mostrar-descripcion {
+        padding: 10px 15px;
+        font-size: 10px;
+    }
+
+    .blog-seccion .mostrar-descripcion:hover {
+        font-size: 12px;
+        background-color: #2793F2;
+    }
+
+    /* Ajustes para la pagina de contacto */
+
+    .contact-section {
+        padding: 0 20px;
+    }
+
+    .contact-section .contacto-titulo {
+        font-size: 20px;
+    }
+
+    .contact-section .contacto-descriptivo {
+        font-size: 14px;
+    }
+
+    .contact-section .donacion-info-titulo,
+    .contact-section .contacto-info-titulo {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .contact-section .contact-info-parrafo,
+    .contact-section .donacion-info-parrafo {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .contact-section ul li {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .contact-section .col-lg-6 iframe,
+    .contact-section .col-lg-6 img {
+        width: 75%;
+        margin: 0 auto;
+        display: block;
+        height: 250px;
+    }
+
+    .contact-section .contact-form {
+        padding: 20px;
+    }
+
+    .contact-section .contact-form h3 {
+        font-size: 20px;
+    }
+
+    .contact-section .contact-form label,
+    .contact-section .contact-form input[type="text"],
+    .contact-section .contact-form input[type="email"],
+    .contact-section .contact-form input[type="tel"],
+    .contact-section .contact-form select,
+    .contact-section .contact-form textarea,
+    .contact-section .contact-form .form-check-label,
+    .contact-section .contact-form button {
+        font-size: 14px;
+    }
+
+    .contact-section .contact-form button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    /* Ajustes para el boton de donacion flotante */
+
+    .donacion-flotante .donacion-flotante-boton {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .donacion-flotante .donacion-flotante-boton:hover {
+        font-size: 12px;
+        color: #000000;
+        background-color: #F4C128;
+    }
+
+    /* Ajustes para el boton de accesibilidad */
+
+    .discapcidad #accessibility-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .discapcidad #accessibility-button i {
+        font-size: 14px;
+    }
+
+
+    .discapcidad .accessibility-panel button {
+        font-size: 14px;
+    }
+
+    .discapcidad .accessibility-panel button i {
+        font-size: 8px;
+        margin-right: 6px;
+    }
+
+    .discapcidad .accessibility-panel button span {
+        font-size: 8px;
+        margin-left: 6px;
+    }
+
+    .discapcidad .accessibility-panel.active {
+        right: 0;
+    }
+
+    .discapcidad #accessibility-button.active {
+        right: 145px;
+    }
+
+
+
+}
+
+
+
+
+/* ------------------------------Inicio de MediaQuery Min-Hover Barra------------------------------------- */
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #E10000;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
