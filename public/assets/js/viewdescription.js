@@ -23,7 +23,7 @@ if (window.innerWidth <= 576) {
     });
 }
 
-//Filtrar con barra de blog
+// Filtrar con barra de blog
 document.addEventListener("DOMContentLoaded", function () {
     // Selecciona todos los elementos con la clase "filtro"
     var filtros = document.querySelectorAll(".filtro");
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//Buscar con el label del blog
+// Buscar con el label del blog
 document.addEventListener("DOMContentLoaded", function () {
     // Función para filtrar las noticias por texto de búsqueda
     function filtrarNoticiasPorTexto(texto) {

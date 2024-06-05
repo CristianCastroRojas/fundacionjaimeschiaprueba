@@ -1,11 +1,11 @@
-/* -----------------------Inicio de Estilos para Banner Swiper----------------------- */
+/* Inicio de Estilos para Banner Swiper */
 .swiper {
     margin-top: 2px;
     width: 100%;
     height: 600px;
 }
 
-.swiper-slide video{
+.swiper-slide video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -22,8 +22,8 @@
     position: relative;
     bottom: 15%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    max-width: 90%; /* Ajusta el ancho máximo del contenedor de texto */
+    transform: translate(-50%, -50%);
+    max-width: 90%;
     text-align: center;
     color: #FFFFFF;
     z-index: 10;
@@ -43,7 +43,7 @@
     margin-bottom: 0;
 }
 
-/* Clase de animacion para imagenes de banner */
+/* Clase de animación para imágenes de banner */
 .kenburns-top {
     animation: kenburns-top 15s ease-out both;
 }
@@ -67,22 +67,14 @@
     height: 40px;
     width: 40px;
     top: 55%;
-    /* Centra verticalmente el botón */
     transform: translateY(-50%);
     color: #E10000;
-    /* Color rojo */
     background-color: rgba(0, 0, 0, 0.5);
-    /* Fondo oscuro con transparencia */
     z-index: 1;
-    /* Botones sobre el contenido */
     border-radius: 50%;
-    /* Forma redonda de los botones */
     padding: 5px;
-    /* Espacio alrededor del ícono */
     opacity: 0;
-    /* Opacidad inicial */
     transition: opacity 0.3s;
-    /* Transición de opacidad */
 }
 
 /* Botón de navegación izquierdo */
@@ -106,7 +98,6 @@
 /* Ajustes para la paginación del swiper */
 .swiper .swiper-pagination {
     --swiper-pagination-color: #2793F2;
-    /* Color azul */
     --swiper-pagination-bullet-size: 20px;
     --swiper-pagination-bullet-width: 10px;
     --swiper-pagination-bullet-height: 10px;
@@ -115,9 +106,5 @@
     --swiper-pagination-bullet-opacity: 1;
     --swiper-pagination-bullet-horizontal-gap: 6px;
 }
+/* Fin de Estilos para Banner Swiper */
 
-/* .swiper .swiper-pagination-bullet {
-    border: 1px solid black;
-} */
-
-/* ----------------------Fin de Estilos para Banner Swiper---------------------------------- */

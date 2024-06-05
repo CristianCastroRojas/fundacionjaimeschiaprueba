@@ -1,46 +1,46 @@
 @import url(style.css);
 
-/* -----------------Inicio de estilos para seccion de Contacto------------------ */
-
-.contact-section{
+/* ----------------- Inicio de estilos para sección de Contacto ------------------ */
+.contact-section {
     background-color: #fff;
     width: 100%;
 }
 
-.contacto-titulo{
+.contacto-titulo {
     margin-top: 2rem;
     font-size: 30px;
     color: #020873;
 }
 
-.contacto-descriptivo{
+.contacto-descriptivo {
     font-size: 25px;
     color: #000000;
 }
 
 .donacion-info-titulo,
-.contacto-info-titulo{
+.contacto-info-titulo {
     color: #020873;
     font-size: 25px;
 }
 
 .contact-info-parrafo,
-.donacion-info-parrafo{
+.donacion-info-parrafo {
     font-size: 15px;
     color: #000000;
 }
 
-.donacion-info-img{
+.donacion-info-img {
     width: 100%;
     height: 500px;
+    object-fit: cover; /* Para asegurar que la imagen mantenga la proporción */
 }
 
-.contact-info-parrafo a{
+.contact-info-parrafo a {
     text-decoration: none;
     color: #000000;
 }
 
-.contact-info-parrafo i{
+.contact-info-parrafo i {
     font-size: 15px;
     align-items: center;
     color: #2793F2;
@@ -99,16 +99,14 @@
     background-color: #2793F2;
     color: #fff;
     cursor: pointer;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 10);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1); /* Corrige el valor de alfa */
     font-size: 15px;
+    transition: all 0.3s; /* Añadido para hacer la transición suave */
 }
 
 .contact-form button:hover {
     font-size: 18px;
-    color: #FFFFFF;
     background-color: #4cbb5f;
-    transition: 0.3s;
 }
 
-
-/* ------------------Fin de estilos para seccion de Contacto-------------------------- */
+/* ------------------ Fin de estilos para sección de Contacto -------------------------- */

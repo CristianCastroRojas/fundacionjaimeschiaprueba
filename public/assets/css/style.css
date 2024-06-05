@@ -1,17 +1,18 @@
-/* -----------------Google Fonts------------- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* ----------------- Google Fonts ------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* -----------------General------------------ */
+/* ----------------- General ------------------ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ----------------Fuente de Cuerpo---------- */
+/* ---------------- Fuente de Cuerpo ---------- */
 body {
     font-family: "Poppins", sans-serif;
 }
+
 
 /* *************************************MediaQuerys Responsive********************************************* */
 
@@ -22,7 +23,7 @@ body {
 
     .navbar-brand {
         margin-left: 10px;
-        margin-right: auto;
+        margin-right: 10px;
     }
 
     .navbar-nav {
@@ -38,7 +39,7 @@ body {
 
     .navbar-toggler {
         margin-left: auto;
-        margin-right: 15px;
+        margin-right: 10px;
     }
 
     .offcanvas-header {
@@ -56,26 +57,26 @@ body {
     }
 
     .swiper .slide-text {
-        bottom: 30%;
+        bottom: 30%; 
         padding: 20px;
     }
 
     .swiper .slide-text h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; 
     }
 
     .swiper .slide-text p {
-        font-size: 1rem;
+        font-size: 1rem; 
     }
 
     .swiper .swiper-button-next,
     .swiper .swiper-button-prev {
-        display: none;
+        display: none; 
     }
 
     /* Ajustes para el componente de redes sociales */
-
     /* Ajustes para el componente de curso arriba */
+
     #scroll-arrow-componente .scroll-arrow .arrow,
     .redes-sociales-boton {
         width: 38px;
@@ -84,12 +85,13 @@ body {
     }
 
     #scroll-arrow-componente .scroll-arrow .arrow i {
-        font-size: 20px;
+        font-size: 20px; 
     }
 
     .redes-sociales-logo {
         font-size: 18px;
     }
+
 
     /* Ajustes para el componente de pie de pagina o footer */
 
@@ -110,7 +112,9 @@ body {
     /* Ajustes para la pagina de inicio sesion hastag */
 
     .hastag-seccion p {
-        font-size: 4vw;
+        font-size: 4vw; /* Tamaño de fuente basado en el ancho de la ventana */
+        /* Limitar el tamaño máximo de fuente */
+        font-size: calc(4vw + 2px); /* Tamaño máximo de fuente */
     }
 
     /* Ajustes para la pagina de inicio sesion información */
@@ -186,7 +190,7 @@ body {
         padding: 10px 10px;
     }
 
-    /* Ajustes para la pagina de conocenos sesion corporativo y equipo*/
+   /* Ajustes para la página de Conócenos, sesión corporativo y equipo */
 
     .corporativo-section,
     .equipo-seccion {
@@ -331,24 +335,19 @@ body {
     }
 
     /* Ajustes de estilo para la barra de filtros */
+
     .blog-seccion .col-md-8 {
-        display: flex;
-        /* Utilizar flexbox */
-        justify-content: center;
-        /* Centrar horizontalmente los elementos */
-        align-items: center;
-        /* Alinear verticalmente los elementos */
+        display: flex; /* Utilizar flexbox */
+        justify-content: center; /* Centrar horizontalmente los elementos */
+        align-items: center; /* Alinear verticalmente los elementos */
         margin-bottom: 20px;
     }
 
     /* Ajustes de estilo para la barra de búsqueda */
     .blog-seccion .col-md-4 {
-        display: flex;
-        /* Utilizar flexbox */
-        justify-content: center;
-        /* Centrar horizontalmente los elementos */
-        align-items: center;
-        /* Alinear verticalmente los elementos */
+        display: flex; /* Utilizar flexbox */
+        justify-content: center; /* Centrar horizontalmente los elementos */
+        align-items: center; /* Alinear verticalmente los elementos */
     }
 
     .blog-seccion #search-input {
@@ -391,7 +390,6 @@ body {
     }
 
     .blog-seccion .mostrar-descripcion:hover {
-        font-size: 14px;
         background-color: #2793F2;
     }
 
@@ -457,6 +455,7 @@ body {
     }
 
     /* Ajustes para el boton de donacion flotante */
+
     .donacion-flotante .donacion-flotante-boton {
         font-size: 14px;
         padding: 12px 25px;
@@ -469,6 +468,7 @@ body {
     }
 
     /* Ajustes para el boton de accesibilidad */
+
     .discapcidad #accessibility-button {
         width: 38px;
         height: 38px;
@@ -509,6 +509,7 @@ body {
 @media screen and (max-width: 576px) {
 
     /* Ajustes para el componente de barra de navegación */
+
     .navbar-brand {
         flex-grow: 1;
         display: flex;
@@ -569,6 +570,7 @@ body {
     }
 
     /* Ajustes para el componente de redes sociales */
+    /* Ajustes para el componente de flecha arriba */
 
     #scroll-arrow-componente .scroll-arrow .arrow,
     .redes-sociales-boton {
@@ -605,7 +607,7 @@ body {
     /* Ajustes para la pagina de inicio sesion hastag */
 
     .hastag-seccion p {
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
     /* Ajustes para la pagina de inicio sesion informacion */
@@ -681,7 +683,7 @@ body {
         padding: 8px 15px;
     }
 
-    /* Ajustes para la pagina de conocenos sesion corporativo y equipo */
+    /* Ajustes para la página de conócenos, sección corporativo y equipo */
 
     .corporativo-section,
     .equipo-seccion {
@@ -723,6 +725,7 @@ body {
 
     .corporativo-section .corporativo-icon {
         font-size: 30px;
+        transition: font-size 0.3s ease; /* Transición suave en el cambio de tamaño */
 
     }
 
@@ -833,24 +836,19 @@ body {
     }
 
     /* Ajustes de estilo para la barra de filtros */
+
     .blog-seccion .col-md-8 {
-        display: flex;
-        /* Utilizar flexbox */
-        justify-content: center;
-        /* Centrar horizontalmente los elementos */
-        align-items: center;
-        /* Alinear verticalmente los elementos */
+        display: flex; /* Utilizar flexbox */
+        justify-content: center; /* Centrar horizontalmente los elementos */
+        align-items: center; /* Alinear verticalmente los elementos */
     }
 
     /* Ajustes de estilo para la barra de búsqueda */
     .blog-seccion .col-md-4 {
         margin-top: 20px;
-        display: flex;
-        /* Utilizar flexbox */
-        justify-content: center;
-        /* Centrar horizontalmente los elementos */
-        align-items: center;
-        /* Alinear verticalmente los elementos */
+        display: flex; /* Utilizar flexbox */
+        justify-content: center; /* Centrar horizontalmente los elementos */
+        align-items: center; /* Alinear verticalmente los elementos */
     }
 
     .blog-seccion .filtro {
@@ -859,10 +857,8 @@ body {
     }
 
     .blog-seccion .card {
-        max-width: 450px;
-        /* Establecer un ancho máximo para las tarjetas */
-        margin: 0 auto;
-        /* Centrar las tarjetas horizontalmente */
+        max-width: 450px; /* Establecer un ancho máximo para las tarjetas */
+        margin: 0 auto; /* Centrar las tarjetas horizontalmente */
     }
 
     .blog-seccion .card img {
@@ -891,7 +887,6 @@ body {
     }
 
     .blog-seccion .mostrar-descripcion:hover {
-        font-size: 12px;
         background-color: #2793F2;
     }
 
@@ -968,7 +963,6 @@ body {
     }
 
     .donacion-flotante .donacion-flotante-boton:hover {
-        font-size: 12px;
         color: #000000;
         background-color: #F4C128;
     }
@@ -1006,9 +1000,6 @@ body {
     .discapcidad #accessibility-button.active {
         right: 145px;
     }
-
-
-
 }
 
 

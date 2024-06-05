@@ -1,41 +1,40 @@
 @import url(style.css);
 
-/* ---------------------Inicio de Estilos para Seccion de Blog------------------------------ */
-.blog-seccion{
+/* --------------------- Inicio de Estilos para Sección de Blog ------------------------------ */
+.blog-seccion {
     width: 100%;
     background-color: #FFFFFF;
 }
 
-.blog-titulo{
+.blog-titulo {
     margin-top: 2rem;
     font-size: 30px;
     color: #020873;
 }
 
-.blog-subtitulo{
+.blog-subtitulo {
     color: #000000;
     font-size: 25px;
 }
 
-/* -----Estilos para las tarjetas de noticias */
-
-
+/* --------------------- Estilos para las tarjetas de noticias ------------------------------ */
 .col-md-6 {
-    margin-bottom: 20px; /* Agregar espacio de separación entre las columnas */
+    margin-bottom: 20px; /* Espacio de separación entre las columnas */
 }
 
 .card {
     border: 2px solid #2793F2;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
-    height: 100%; /* Establecer una altura fija */
+    height: 100%; /* Altura fija */
     display: flex; /* Usar flexbox */
     flex-direction: column; /* Alinear elementos internos en columna */
 }
 
-.card img{
+.card img {
     width: 100%;
     height: 400px;
+    object-fit: cover;
 }
 
 .card:hover {
@@ -44,7 +43,7 @@
 
 .card-body {
     padding: 20px;
-    flex: 1; /* Hacer que el cuerpo de la tarjeta se expanda para ocupar el espacio disponible */
+    flex: 1; /* Expandir para ocupar el espacio disponible */
 }
 
 .card-title {
@@ -53,12 +52,7 @@
     color: #000000;
 }
 
-.card-text {
-    font-size: 15px;
-    color: #666;
-}
-
-.descripcion {
+.card-text, .descripcion {
     font-size: 15px;
     color: #666;
 }
@@ -77,9 +71,7 @@
 
 .mostrar-descripcion:hover {
     font-size: 16px;
-    color: #FFFFFF;
     background-color: #4cbb5f;
-    transition: 0.3s;
 }
 
 .card-footer {
@@ -95,7 +87,6 @@
     margin-right: 10px;
 }
 
-/* Estilos para los botones de redes sociales */
 .card-footer .btn {
     font-size: 15px;
     margin-right: -15px;
@@ -107,13 +98,11 @@
     color: #fff;
 }
 
-
-.oculto{
+.oculto {
     display: none;
 }
 
-
-/* Estilos para la barra de búsqueda */
+/* --------------------- Estilos para la barra de búsqueda ------------------------------ */
 #search-input {
     border-radius: 5px 0 0 5px;
     border: 1px solid #ced4da;
@@ -128,18 +117,13 @@
     padding: 8px;
 }
 
-/* Estilos para los botones de categoría */
+/* --------------------- Estilos para los botones de categoría ------------------------------ */
 .filtro {
     font-size: 15px;
     margin-right: 10px;
 }
 
-.filtro.active {
-    background-color: #007bff;
-    color: #fff;
-}
-
-.filtro:hover {
+.filtro.active, .filtro:hover {
     background-color: #007bff;
     color: #fff;
 }
@@ -149,4 +133,4 @@
     box-shadow: none;
 }
 
-/* ---------------------Fin de Estilos para Seccion de Blog------------------------------ */
+/* --------------------- Fin de Estilos para Sección de Blog ------------------------------ */

@@ -1,9 +1,8 @@
-@import url(style.css);
-/* ------------------------------------Inicio de Estilos Pie de Pagina Seccion------------------- */
+@import url('style.css');
 
 .footer-seccion {
     background: #D31027;
-    /* fallback for old browsers */
+    /* fallback para navegadores antiguos */
     background: -webkit-linear-gradient(to right, #EA384D, #D31027);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #EA384D, #D31027);
@@ -43,4 +42,3 @@
     font-size: 12px;
     font-style: italic;
 }
-

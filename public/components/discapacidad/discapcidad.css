@@ -4,7 +4,7 @@
 #accessibility-button {
     position: fixed;
     top: 50%;
-    right: 0px;
+    right: 0;
     background-color: #020873;
     color: #FFFFFF;
     border: none;
@@ -17,10 +17,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: right 0.5s ease;
+    border-radius: 50%;
 }
 
 #accessibility-button:hover {
-    background-color: #020873;
+    background-color: #010661;
 }
 
 #accessibility-button i {
@@ -32,7 +33,6 @@
     position: fixed;
     top: 50%;
     right: -300px;
-    /* Panel inicialmente fuera de la vista */
     transform: translateY(-50%);
     background-color: #FFFFFF;
     border: 1px solid #2793F2;
@@ -83,4 +83,62 @@
 /* Mover el botón cuando el panel esté activo */
 #accessibility-button.active {
     right: 190px;
+}
+
+/* Estilos para el botón de traducción */
+#translate-button {
+    position: fixed;
+    top: 75%;
+    right: 0;
+    z-index: 1000;
+}
+
+#translate {
+    background-color: #020873;
+    color: #FFFFFF;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: right 0.5s ease;
+    border-radius: 50%;
+}
+
+#translate:hover {
+    background-color: #010661;
+}
+
+/* Estilos para las opciones de traducción */
+.translate-options {
+    position: absolute;
+    bottom: 0;
+    right: calc(100% + 10px);/* Ajusta la posición de las opciones */
+    background-color: #FFFFFF;
+    border: 1px solid #2793F2;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;/* Comienza oculto */
+
+}
+
+.translate-option {
+    border: none;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    margin: 0 2px;
+    padding: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.translate-option:hover {
+    background-color: #f0f0f0;
+}
+
+.translate-option img {
+    width: 18px;
+    height: auto;
 }

@@ -1,7 +1,7 @@
 @import url(style.css);
 
-/* ---------.........Inicio de estilos seccion de proyectos........-------------- */
-.testimonial-carousel
+/* ------------------------- Inicio de Estilos Sección de Proyectos ----------------------------- */
+.testimonial-carousel,
 .donacion-proyecto-seccion,
 .corporativo-section {
     width: 100%;
@@ -37,7 +37,9 @@
     color: #020873;
 }
 
-.cultural-subtitulo .social-subtitulo .deportivo-subtitulo {
+.deportivo-subtitulo,
+.social-subtitulo,
+.cultural-subtitulo {
     margin: 20px 0;
     font-size: 15px;
     color: #000000;
@@ -46,7 +48,6 @@
 hr {
     color: #020873;
 }
-
 
 .gallery-item img {
     width: 100%;
@@ -60,11 +61,9 @@ hr {
 .gallery-item img:hover {
     transform: scale(1.1);
 }
-  
+/* ------------------------- Fin de Estilos Sección de Proyectos ----------------------------- */
 
-/* ------------------------------Fin de estilos seccion de proyectos---------------------------------- */
-
-/* --------------------------------------Inicio de Estilos Donación Seccion ---------------------------*/
+/* ------------------------- Inicio de Estilos Donación Sección ----------------------------- */
 .donacion-proyecto-seccion {
     margin-top: 2rem;
     padding: 20px 0;
@@ -79,7 +78,7 @@ hr {
     text-align: center;
     font-size: 25px;
     color: #020873;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .donacion-proyecto-subtitulo {
@@ -104,17 +103,15 @@ hr {
     font-size: 18px;
     color: #FFFFFF;
     background-color: #4cbb5f;
-    transition: 0.3s;
 }
 
 .icono-donacion-proyecto {
     font-size: 20px;
     margin-right: 5px;
 }
+/* ------------------------- Fin de Estilos Donación Sección ----------------------------- */
 
-/* -----------------------------------Fin de Estilos Donación Seccion------------------------------------- */
-
-/* ---------------------------------Estilos para el carrusel de testimonios --------------------------------*/
+/* ------------------------- Inicio de Estilos para el Carrusel de Testimonios ----------------------------- */
 .testimonial-carousel {
     background-color: #FFFFFF;
     padding: 20px 0;
@@ -144,5 +141,4 @@ hr {
     font-size: 15px;
     font-weight: bold;
 }
-
-/* -----------------------------Fin de Estilos para el carrusel de testimonios --------------------------------*/
+/* ------------------------- Fin de Estilos para el Carrusel de Testimonios ----------------------------- */

@@ -1,291 +1,237 @@
+// Funciones de utilidad
+
+// Función para cargar un componente desde una ruta y agregarlo al DOM
+function fetchAndAppendComponent(componentId, componentPath, callback) {
+    fetch(componentPath)
+        .then(response => response.text())
+        .then(data => {
+            const fragment = document.createRange().createContextualFragment(data);
+            document.getElementById(componentId).appendChild(fragment);
+            if (callback) callback();
+        })
+        .catch(error => console.error(`Error al cargar el componente ${componentId}:`, error));
+}
+
+// Función para agregar un event listener a un botón
+function addEventListenerToButton(buttonId, event, callback) {
+    document.getElementById(buttonId).addEventListener(event, callback);
+}
+
+// Función para agregar un event listener al objeto window
+function addEventListenerToWindow(event, callback) {
+    window.addEventListener(event, callback);
+}
+
+// Cargar componentes
 document.addEventListener('DOMContentLoaded', function () {
-    // Cargar y agregar el contenido del complemento barra de navegación
-    fetch('./components/navbar/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            const fragment = document.createRange().createContextualFragment(data);
-            document.getElementById('navbar-componente').appendChild(fragment);
-        })
-        .catch(error => console.error('Error al cargar el componente navbar:', error));
+    // Componentes y sus rutas
+    const components = [
+        { id: 'navbar-componente', path: './components/navbar/navbar.html' },
+        { id: 'banner-componente', path: './components/swiper/banner.html', callback: initializeSwiper },
+        { id: 'footer-componente', path: './components/footer/footer.html' },
+        { id: 'scroll-arrow-componente', path: './components/scroll-arrow/scroll-arrow.html', callback: addScrollArrowFunctionality },
+        { id: 'social-componente', path: './components/social/social.html' },
+        { id: 'donacion-componente', path: './components/donacion/donacion.html' },
+        { id: 'discapacidad-componente', path: './components/discapacidad/discapacidad.html', callback: addAccessibilityFunctionality }
+    ];
 
-    // Cargar y agregar el contenido del complemento banner/slider
-    fetch('./components/swiper/banner.html')
-        .then(response => response.text())
-        .then(data => {
-            const fragment = document.createRange().createContextualFragment(data);
-            document.getElementById('banner-componente').appendChild(fragment);
-            // Inicializa el Swiper después de cargar el contenido del banner
-            const swiper = new Swiper(".swiper", {
-                direction: "horizontal",
-                loop: true,
-                allowTouchMove: true,
-                effect: "fade",
-                autoplay: {
-                    delay: 6000,
-                },
-                keyboard: {
-                    enabled: true,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                    dynamicBullets: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-            });
-        })
-        .catch(error => console.error('Error al cargar el componente banner:', error));
+    // Cargar componentes
+    components.forEach(component => {
+        fetchAndAppendComponent(component.id, component.path, component.callback);
+    });
+});
 
-    // Cargar y agregar el contenido del complemento footer
-    fetch('./components/footer/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            const fragment = document.createRange().createContextualFragment(data);
-            document.getElementById('footer-componente').appendChild(fragment);
-        })
-        .catch(error => console.error('Error al cargar el componente footer:', error));
-
-    // Cargar y agregar el contenido del complemento scroll-arrow
-    fetch('./components/scroll-arrow/scroll-arrow.html')
-        .then(response => response.text())
-        .then(data => {
-            const fragment = document.createRange().createContextualFragment(data);
-            document.getElementById('scroll-arrow-componente').appendChild(fragment);
-            // Detectar el desplazamiento de la página para mostrar/ocultar la flecha de desplazamiento
-            window.addEventListener("scroll", function () {
-                var scrollArrow = document.querySelector('.scroll-arrow');
-                // Calcula la posición del 85% del final de la página
-                var scrollPosition = window.scrollY;
-                var windowHeight = window.innerHeight;
-                var documentHeight = document.body.offsetHeight;
-                var scrollPercent = (scrollPosition / (documentHeight - windowHeight)) * 100;
-
-                // Si el usuario ha llegado al 85% del final de la página, muestra la flecha
-                if (scrollPercent > 85) {
-                    scrollArrow.style.opacity = 1;
-                } else {
-                    scrollArrow.style.opacity = 0;
-                }
-            });
-
-            // Desplazar suavemente hacia arriba al hacer clic en la flecha
-            document.addEventListener("click", function (e) {
-                if (e.target.classList.contains('arrow')) {
-                    e.preventDefault();
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth"
-                    });
-                }
-            });
-        })
-        .catch(error => console.error('Error al cargar el componente de flecha de desplazamiento:', error));
-
-    // Cargar y agregar el contenido del complemento social
-    fetch('./components/social/social.html')
-        .then(response => response.text())
-        .then(data => {
-            const fragment = document.createRange().createContextualFragment(data);
-            document.getElementById('social-componente').appendChild(fragment);
-        })
-        .catch(error => console.error('Error al cargar el componente social:', error));
-
-    // Cargar y agregar el contenido del complemento donacion flotante
-    fetch('./components/donacion/donacion.html')
-        .then(response => response.text())
-        .then(data => {
-            const fragment = document.createRange().createContextualFragment(data);
-            document.getElementById('donacion-componente').appendChild(fragment);
-        })
-        .catch(error => console.error('Error al cargar el componente donacion:', error));
-
-    // Cargar y agregar el contenido del complemento accesibilidad
-    fetch('./components/discapacidad/discapacidad.html')
-        .then(response => response.text())
-        .then(data => {
-            const fragment = document.createRange().createContextualFragment(data);
-            document.getElementById('discapacidad-componente').appendChild(fragment);
-            // Script para controlar la visibilidad del panel de accesibilidad
-            document.getElementById('accessibility-button').addEventListener('click', function () {
-                var panel = document.getElementById('accessibility-panel');
-                var button = document.getElementById('accessibility-button');
-                // Alternar la clase 'active' en el panel y el botón para controlar la visibilidad
-                panel.classList.toggle('active');
-                button.classList.toggle('active');
-            });
-
-            // Funcionalidad general para activar el aumento de letra
-            document.getElementById('increase-font').addEventListener('click', function () {
-                var body = document.querySelector('body');
-                var currentFontSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
-                var increment = 2; // Definir el incremento en píxeles
-
-                // Calcular el nuevo tamaño de fuente
-                var newFontSize = currentFontSize + increment;
-
-                // Aplicar el nuevo tamaño de fuente al cuerpo
-                body.style.fontSize = newFontSize + 'px';
-
-                // Aplicar el nuevo tamaño de fuente a todos los elementos secundarios, excluyendo el botón y el panel de accesibilidad
-                var elements = document.querySelectorAll('body *:not(#accessibility-button):not(#accessibility-button *):not(#accessibility-panel):not(#accessibility-panel *)');
-                for (var i = 0; i < elements.length; i++) {
-                    var currentElementFontSize = parseFloat(window.getComputedStyle(elements[i], null).getPropertyValue('font-size'));
-                    elements[i].style.fontSize = (currentElementFontSize + increment) + 'px';
-                }
-            });
-
-
-
-            // Funcionalidad general para activar la disminución de letra
-            document.getElementById('decrease-font').addEventListener('click', function () {
-                var body = document.querySelector('body');
-                var currentFontSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
-                var decrement = 2; // Definir el decremento en píxeles
-
-                // Calcular el nuevo tamaño de fuente
-                var newFontSize = currentFontSize - decrement;
-
-                // Aplicar el nuevo tamaño de fuente al cuerpo
-                body.style.fontSize = newFontSize + 'px';
-
-                // Aplicar el nuevo tamaño de fuente a todos los elementos secundarios, excluyendo el botón y el panel de accesibilidad
-                var elements = document.querySelectorAll('body *:not(#accessibility-button):not(#accessibility-button *):not(#accessibility-panel):not(#accessibility-panel *)');
-                for (var i = 0; i < elements.length; i++) {
-                    var currentElementFontSize = parseFloat(window.getComputedStyle(elements[i], null).getPropertyValue('font-size'));
-                    elements[i].style.fontSize = (currentElementFontSize - decrement) + 'px';
-                }
-            });
-
-
-
-            // Funcionalidad general para activar el contraste de daltonismo
-// Variable para almacenar los estilos originales de los elementos
-var originalStyles = new Map();
-
-// Función para restaurar los estilos originales de los elementos
-function restoreOriginalStyles() {
-    originalStyles.forEach(function(styles, element) {
-        Object.assign(element.style, styles);
+// Funcionalidades específicas de los componentes
+// Función para inicializar Swiper
+function initializeSwiper() {
+    new Swiper(".swiper", {
+        direction: "horizontal",
+        loop: true,
+        allowTouchMove: true,
+        effect: "fade",
+        autoplay: { delay: 6000 },
+        keyboard: { enabled: true },
+        pagination: { el: ".swiper-pagination", clickable: true, dynamicBullets: true },
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
     });
 }
 
-// Evento para alternar entre el modo de contraste y el estado normal
-var contrastMode = false; // Variable para controlar el estado del modo de contraste
+// Función para agregar funcionalidad de flecha de desplazamiento
+function addScrollArrowFunctionality() {
+    addEventListenerToWindow("scroll", function () {
+        const scrollArrow = document.querySelector('.scroll-arrow');
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.offsetHeight;
+        const scrollPercent = (scrollPosition / (documentHeight - windowHeight)) * 100;
 
-document.getElementById('toggle-contrast').addEventListener('click', function () {
-    if (!contrastMode) {
-        // Aplicar los cambios de color para daltonismo
-        var elements = document.querySelectorAll('*');
-        elements.forEach(function (element) {
-            // Guardar los estilos originales del elemento
-            originalStyles.set(element, {
-                backgroundColor: element.style.backgroundColor,
-                color: element.style.color
+        if (scrollPercent > 85) {
+            scrollArrow.style.opacity = 1;
+        } else {
+            scrollArrow.style.opacity = 0;
+        }
+    });
+
+    addEventListenerToButton("scroll-arrow-componente", "click", function (e) {
+        if (e.target.classList.contains('arrow')) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
             });
+        }
+    });
+}
 
-            // Cambiar los colores para simular daltonismo
-            element.style.backgroundColor = '#f0f0f0'; // Fondo más claro
-            element.style.color = '#333'; // Texto más oscuro
+// Función para agregar funcionalidades de accesibilidad
+function addAccessibilityFunctionality() {
+    // Funcionalidad para mostrar/ocultar panel de accesibilidad
+    addEventListenerToButton("accessibility-button", "click", function () {
+        const panel = document.getElementById('accessibility-panel');
+        const button = document.getElementById('accessibility-button');
+        panel.classList.toggle('active');
+        button.classList.toggle('active');
+    });
 
-            if (element.classList.contains('boton')) {
-                element.style.backgroundColor = '#6495ED'; // Cambiar el color de fondo del botón
-                element.style.color = '#fff'; // Texto más claro en el botón
-            }
-            if (element.classList.contains('enlace')) {
-                element.style.color = '#800080'; // Cambiar el color de los enlaces
+    // Funcionalidades de ajuste de aumento de tamaño de fuente
+    addEventListenerToButton("increase-font", "click", function () {
+        changeFontSize(2);
+    });
+
+    // Funcionalidades de ajuste de disminución de tamaño de fuente
+    addEventListenerToButton("decrease-font", "click", function () {
+        changeFontSize(-2);
+    });
+
+    // Funcionalidad de cambio de contraste
+    addEventListenerToButton("toggle-contrast", "click", function () {
+        toggleContrast();
+    });
+
+    // Funcionalidad de cambio de zoom
+    addEventListenerToButton("toggle-cursor", "click", function () {
+        toggleZoom();
+    });
+
+    // Funcionalidad del narrador
+    addEventListenerToButton("toggle-narrator", "click", function () {
+        toggleNarrator();
+    });
+
+    // Funcionalidad para restablecer estilos
+    addEventListenerToButton("reset-styles", "click", function () {
+        resetStyles();
+    });
+
+    // Función para cambiar el tamaño de la fuente (Incremento)
+    function changeFontSize(increment) {
+        const body = document.querySelector('body');
+        let currentFontSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
+        currentFontSize += increment;
+        body.style.fontSize = currentFontSize + 'px';
+
+        const elements = document.querySelectorAll('body *:not(#accessibility-button):not(#accessibility-button *):not(#accessibility-panel):not(#accessibility-panel *)');
+        elements.forEach(element => {
+            let currentElementFontSize = parseFloat(window.getComputedStyle(element, null).getPropertyValue('font-size'));
+            currentElementFontSize += increment;
+            element.style.fontSize = currentElementFontSize + 'px';
+        });
+    }
+
+    // Función para alternar el modo de contraste
+    let contrastMode = false;
+    const originalStyles = new Map();
+
+    function toggleContrast() {
+        const elements = document.querySelectorAll('*');
+        elements.forEach(element => {
+            if (!contrastMode) {
+                originalStyles.set(element, {
+                    backgroundColor: element.style.backgroundColor,
+                    color: element.style.color
+                });
+
+                element.style.backgroundColor = '#f0f0f0';
+                element.style.color = '#333';
+
+                if (element.classList.contains('boton')) {
+                    element.style.backgroundColor = '#6495ED';
+                    element.style.color = '#fff';
+                }
+                if (element.classList.contains('enlace')) {
+                    element.style.color = '#800080';
+                }
+            } else {
+                restoreOriginalStyles();
             }
         });
 
-        // Actualizar el estado del modo de contraste
-        contrastMode = true;
-    } else {
-        // Restaurar los estilos originales
-        restoreOriginalStyles();
-
-        // Actualizar el estado del modo de contraste
-        contrastMode = false;
+        contrastMode = !contrastMode;
+        const accessibilityPanel = document.getElementById('accessibility-panel');
+        accessibilityPanel.style.display = 'block';
     }
 
-    // Mantener visible la barra de accesibilidad
-    var accessibilityPanel = document.getElementById('accessibility-panel');
-    accessibilityPanel.style.display = 'block';
-});
+    // Función para restaurar los estilos originales
+    function restoreOriginalStyles() {
+        originalStyles.forEach((styles, element) => {
+            Object.assign(element.style, styles);
+        });
+    }
 
+    // Función para alternar el zoom
+    let isZoomed = false;
 
-            //Funconalidad general para activar el aumento de contenido
-            // Variable para almacenar el estado del zoom
-            var isZoomed = false;
+    function toggleZoom() {
+        if (isZoomed) {
+            document.body.style.zoom = '100%';
+        } else {
+            document.body.style.zoom = '120%';
+        }
 
-            document.getElementById('toggle-cursor').addEventListener('click', function () {
-                // Cambiar el tamaño del cursor aumentando o disminuyendo el zoom
-                if (isZoomed) {
-                    document.body.style.zoom = '100%'; // Restablecer el zoom
-                } else {
-                    document.body.style.zoom = '120%'; // Aumentar el zoom
-                }
+        isZoomed = !isZoomed;
+        const accessibilityPanel = document.getElementById('accessibility-panel');
+        accessibilityPanel.style.display = 'block';
+    }
 
-                // Alternar el estado del zoom
-                isZoomed = !isZoomed;
+    // Función para alternar el narrador
+    let isNarrating = false;
+    let synth = window.speechSynthesis;
+    let utterance;
 
-                // Mantener visible la barra de accesibilidad
-                var accessibilityPanel = document.getElementById('accessibility-panel');
-                accessibilityPanel.style.display = 'block';
-            });
+    function toggleNarrator() {
+        if (!isNarrating) {
+            utterance = new SpeechSynthesisUtterance(document.body.innerText);
+            utterance.lang = 'es-ES';
+            synth.speak(utterance);
+            isNarrating = true;
+        } else {
+            synth.cancel();
+            isNarrating = false;
+        }
 
-            // Variable para almacenar el estado del narrador
-            var isNarrating = false;
-            var synth = window.speechSynthesis;
-            var utterance;
+        const accessibilityPanel = document.getElementById('accessibility-panel');
+        accessibilityPanel.style.display = 'block';
+    }
 
-            document.getElementById('toggle-narrator').addEventListener('click', function () {
-                if (!isNarrating) {
-                    // Crear una nueva instancia de SpeechSynthesisUtterance
-                    utterance = new SpeechSynthesisUtterance(document.body.innerText);
-                    utterance.lang = 'es-ES'; // Configurar el idioma a español
+    // Función para restablecer estilos
+    function resetStyles() {
+        document.body.style.fontSize = '';
+        const elements = document.querySelectorAll('body *');
+        elements.forEach(element => {
+            element.style.fontSize = '';
+        });
+        restoreOriginalStyles();
+        document.body.style.zoom = '100%';
+        if (isNarrating) {
+            synth.cancel();
+            isNarrating = false;
+        }
+        contrastMode = false;
+        isZoomed = false;
+        const accessibilityPanel = document.getElementById('accessibility-panel');
+        accessibilityPanel.style.display = 'block';
+    }
+}
 
-                    // Iniciar la narración
-                    synth.speak(utterance);
-                    isNarrating = true;
-                } else {
-                    // Detener la narración
-                    synth.cancel();
-                    isNarrating = false;
-                }
+// Otras funcionalidades globales...
 
-                // Mantener visible la barra de accesibilidad
-                var accessibilityPanel = document.getElementById('accessibility-panel');
-                accessibilityPanel.style.display = 'block';
-            });
-
-            // Funconalidad para restablecer los estilos
-            document.getElementById('reset-styles').addEventListener('click', function () {
-                document.body.style.fontSize = '';
-                var elements = document.querySelectorAll('body *');
-                for (var i = 0; i < elements.length; i++) {
-                    elements[i].style.fontSize = '';
-                }
-                restoreOriginalStyles();
-                document.body.style.zoom = '100%';
-                if (isNarrating) {
-                    synth.cancel();
-                    isNarrating = false;
-                }
-                clickCountIncrease = 0;
-                clickCountDecrease = 0;
-                contrastMode = false;
-                isZoomed = false;
-                var accessibilityPanel = document.getElementById('accessibility-panel');
-                accessibilityPanel.style.display = 'block';
-            });
-
-        })
-        .catch(error => console.error('Error al cargar el componente access:', error));
-
-});
-//Restablecer el desplazamiento a la parte superior de la página
-// window.addEventListener('load', () => {
-//     window.scrollTo(0, 0);
-// });

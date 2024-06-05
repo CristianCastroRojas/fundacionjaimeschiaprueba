@@ -7,8 +7,7 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
     <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap-5.3.3/dist/css/bootstrap.min.css">
     <!-- FONT AWESOME ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -31,23 +30,28 @@
 </head>
 
 <body>
+    
     <!-- Inicio Barra de Navegación -->
     <header id="navbar-componente"></header>
     <!-- Fin Barra de Navegación -->
+
     <!-- Inicio Barra de Redes Sociales -->
     <div id="social-componente"></div>
     <!-- Fin Barra de Redes Sociales -->
+
     <!-- Inicio de Scroll -->
     <div id="scroll-arrow-componente"></div>
     <!-- Fin de Scroll -->
+
     <main>
+        <!-- Inicio de Sesión de Blog -->
         <section class="blog-seccion">
             <div class="container">
-                <div class="row ">
+                <div class="row">
                     <div class="col-12 text-center animate__animated animate__backInLeft">
-                        <h2 class="blog-titulo ">Últimas Noticias</h2>
-                        <p class="blog-subtitulo">Aquí encontrarás las noticias más recientes sobre nuestros proyectos y
-                            actividades.</p>
+                        <h2 class="blog-titulo" title="Últimas Noticias">Últimas Noticias</h2>
+                        <p class="blog-subtitulo" title="Noticias más recientes sobre nuestros proyectos y actividades">
+                            Aquí encontrarás las noticias más recientes sobre nuestros proyectos y actividades.</p>
                     </div>
                 </div>
                 <div class="container">
@@ -55,44 +59,62 @@
                         <!-- Barra de filtros -->
                         <div class="col-md-8">
                             <div class="d-flex justify-content-start">
-                                <a class="btn btn-outline-primary me-2 filtro" data-categoria="todos">Todos</a>
-                                <a class="btn btn-outline-primary me-2 filtro" data-categoria="comunidad">Comunidad</a>
-                                <a class="btn btn-outline-primary me-2 filtro" data-categoria="social">Social</a>
+                                <a class="btn btn-outline-primary me-2 filtro" data-categoria="todos"
+                                    title="Mostrar todas las noticias">Todos</a>
+                                <a class="btn btn-outline-primary me-2 filtro" data-categoria="comunidad"
+                                    title="Mostrar noticias de la comunidad">Comunidad</a>
+                                <a class="btn btn-outline-primary me-2 filtro" data-categoria="social"
+                                    title="Mostrar noticias sociales">Social</a>
                             </div>
                         </div>
                         <!-- Barra de búsqueda -->
                         <div class="col-md-4">
                             <div class="d-flex justify-content-end">
-                                <form class="d-flex" id="search-form">
-                                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar"
-                                        id="search-input">
-                                    <button class="btn btn-primary" type="submit" id="search-button">Buscar</button>
+                                <form class="d-flex" id="search-form" title="Formulario de búsqueda">
+                                    <input class="form-control me-2" type="search" placeholder="Buscar"
+                                        aria-label="Buscar" id="search-input" title="Campo de búsqueda">
+                                    <button class="btn btn-primary" type="submit" id="search-button"
+                                        title="Botón de búsqueda">Buscar</button>
                                 </form>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
                 <div class="container mt-5" id="noticias-container">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="card mb-4 filtro-todos filtro-comunidad" id="noticia_1"  data-aos="zoom-out">
+                            <div class="card mb-4 filtro-todos filtro-comunidad" id="noticia_1" data-aos="zoom-out">
                                 <img src="./assets/images/blog/noticias/noticia_1.jpg" class="card-img-top img-fluid"
-                                    alt="Placeholder">
+                                    alt="Imagen representativa de la renovación en el Parque Virgen del Carmen"
+                                    title="Renovación del Parque Virgen del Carmen: Un Renacimiento Verde y Social">
                                 <div class="card-body">
-                                    <h5 class="card-title">Renovación del Parque Virgen del Carmen: Un Renacimiento Verde y Social</h5>
-                                    <p class="card-text descripcion oculto">La Fundación Jaimes Chía ha culminado la renovación del Parque Virgen del Carmen en la ciudadela La Libertad, barrio Aguas Calientes. Se han instalado nuevos juegos infantiles, limpiado las áreas verdes, plantado árboles y pintado murales, transformando el parque en un espacio vibrante y acogedor para la comunidad. Esta renovación no solo mejora el aspecto físico del parque, sino que también fortalece los lazos sociales entre los residentes locales, convirtiéndolo en un punto de encuentro y recreación para todas las edades.</p>
-                                    <p class="card-text"><strong>Categoría:</strong> Comunidad</p>
-                                    <!-- Aquí está la categoría -->
-                                    <a class="btn mostrar-descripcion">Leer noticia completa</a>
-                                    <p class="card-text mt-2"><small class="text-body-secondary">15 de Mayo de 2024</small></p>
+                                    <h5 class="card-title"
+                                        title="Renovación del Parque Virgen del Carmen: Un Renacimiento Verde y Social">
+                                        Renovación del Parque Virgen del Carmen: Un Renacimiento Verde y Social</h5>
+                                    <p class="card-text descripcion oculto"
+                                        title="Descripción de la renovación del parque">La Fundación Jaimes Chía ha
+                                        culminado la renovación del Parque Virgen del Carmen en la ciudadela La
+                                        Libertad, barrio Aguas Calientes. Se han instalado nuevos juegos infantiles,
+                                        limpiado las áreas verdes, plantado árboles y pintado murales, transformando el
+                                        parque en un espacio vibrante y acogedor para la comunidad. Esta renovación no
+                                        solo mejora el aspecto físico del parque, sino que también fortalece los lazos
+                                        sociales entre los residentes locales, convirtiéndolo en un punto de encuentro y
+                                        recreación para todas las edades.</p>
+                                    <p class="card-text" title="Categoria: Comunidad"><strong>Categoría:</strong>
+                                        Comunidad</p>
+                                    <a class="btn mostrar-descripcion" title="Leer noticia completa">Leer noticia
+                                        completa</a>
+                                    <p class="card-text mt-2"><small class="text-body-secondary">15 de Mayo de
+                                            2024</small></p>
                                 </div>
                                 <div class="card-footer">
                                     <span>Compártenos:</span>
-                                    <a href="#" class="btn compartir-facebook"><i class="fab fa-facebook"></i></a>
-                                    <a href="#" class="btn compartir-whatsapp"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#" class="btn compartir-twitter"><i class="fab fa-twitter"></i></a>
-                                    <!-- Agrega más botones de redes sociales según sea necesario -->
+                                    <a href="#" class="btn compartir-facebook" title="Compartir en Facebook"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a href="#" class="btn compartir-whatsapp" title="Compartir en WhatsApp"><i
+                                            class="fab fa-whatsapp"></i></a>
+                                    <a href="#" class="btn compartir-twitter" title="Compartir en Twitter"><i
+                                            class="fab fa-twitter"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -100,61 +122,109 @@
                         <div class="col-md-6">
                             <div class="card mb-4 filtro-todos filtro-comunidad" id="noticia_2" data-aos="zoom-out">
                                 <img src="./assets/images/blog/noticias/noticia_2.jpg" class="card-img-top img-fluid"
-                                    alt="Placeholder">
+                                    alt="Imagen representativa de las mejoras viales en la calle 3 de la avenida 6"
+                                    title="Imagen representativa de las mejoras viales en la calle 3 de la avenida 6">
                                 <div class="card-body">
-                                    <h5 class="card-title">Mejoras Viales en la Calle 3 de la Avenida 6 del barrio Torcoroma: Avanzando hacia una Movilidad Eficiente</h5>
-                                    <p class="card-text descripcion oculto">La Fundación Jaimes Chía se enorgullece en anunciar la finalización de las mejoras viales en la Calle 3 de la Avenida 6 ubicada en el barrio Torcoroma, un hito significativo para la comunidad local. Esta importante vía, que anteriormente se encontraba en mal estado y era prácticamente intransitable para los vehículos, ha sido sometida a una completa reconstrucción y pavimentación.Gracias a este proyecto, ahora los residentes de la zona pueden disfrutar de una vía segura y transitabable, lo que significa un paso crucial hacia una movilidad más eficiente en el barrio.</p>
-                                    <p class="card-text"><strong>Categoría:</strong> Comunidad</p>
-                                    <!-- Aquí está la categoría -->
-                                    <a class="btn mostrar-descripcion">Leer noticia completa</a>
-                                    <p class="card-text mt-2"><small class="text-body-secondary">15 de Mayo de 2024</small></p>
+                                    <h5 class="card-title"
+                                        title="Mejoras Viales en la Calle 3 de la Avenida 6 del barrio Torcoroma">
+                                        Mejoras Viales en la Calle 3 de la Avenida 6 del barrio Torcoroma</h5>
+                                    <p class="card-text descripcion oculto" title="Descripción de las mejoras viales">La
+                                        Fundación Jaimes Chía se enorgullece en anunciar la finalización de las mejoras
+                                        viales en la Calle 3 de la Avenida 6 ubicada en el barrio Torcoroma, un hito
+                                        significativo para la comunidad local. Esta importante vía, que anteriormente se
+                                        encontraba en mal estado y era prácticamente intransitable para los vehículos,
+                                        ha sido sometida a una completa reconstrucción y pavimentación. Gracias a este
+                                        proyecto, ahora los residentes de la zona pueden disfrutar de una vía segura y
+                                        transitable, lo que significa un paso crucial hacia una movilidad más eficiente
+                                        en el barrio.</p>
+                                    <p class="card-text" title="Categoria: Comunidad"><strong>Categoría:</strong>
+                                        Comunidad</p>
+                                    <a class="btn mostrar-descripcion" title="Leer noticia completa">Leer noticia
+                                        completa</a>
+                                    <p class="card-text mt-2"><small class="text-body-secondary">15 de Mayo de
+                                            2024</small></p>
                                 </div>
                                 <div class="card-footer">
                                     <span>Compártenos:</span>
-                                    <a href="#" class="btn"><i class="fab fa-facebook"></i></a>
-                                    <a href="#" class="btn"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#" class="btn"><i class="fab fa-twitter"></i></a>
-                                    <!-- Agrega más botones de redes sociales según sea necesario -->
+                                    <a href="#" class="btn compartir-facebook" title="Compartir en Facebook"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a href="#" class="btn compartir-whatsapp" title="Compartir en WhatsApp"><i
+                                            class="fab fa-whatsapp"></i></a>
+                                    <a href="#" class="btn compartir-twitter" title="Compartir en Twitter"><i
+                                            class="fab fa-twitter"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="card mb-4 filtro-todos filtro-comunidad" id="noticia_3" data-aos="zoom-out">
-                                <img src="./assets/images/blog/noticias/noticia_3.jpg" class="card-img-top img-fluid" alt="Placeholder">
+                                <img src="./assets/images/blog/noticias/noticia_3.jpg" class="card-img-top img-fluid"
+                                    alt="Imagen representativa de la renovación de la cancha del sector Boconó"
+                                    title="Imagen representativa de la renovación de la cancha del sector Boconó">
                                 <div class="card-body">
-                                    <h5 class="card-title">Renovación de la Cancha en el Sector Boconó: Rescate y Embellecimiento Deportivo</h5>
-                                    <p class="card-text descripcion oculto">La Fundación Jaimes Chía se complace en anunciar la exitosa renovación de la cancha en el sector Boconó, una transformación que ha devuelto vida y vitalidad a este espacio deportivo tan querido por la comunidad local. Este proyecto integral incluyó la pintura de paredes, el arreglo de la zona de la cancha deportiva y la recuperación de los espacios verdes circundantes.</p>
-                                    <p class="card-text"><strong>Categoría:</strong> Comunidad</p>
-                                    <!-- Aquí está la categoría -->
-                                    <a class="btn mostrar-descripcion">Leer noticia completa</a>
-                                    <p class="card-text mt-2"><small class="text-body-secondary">15 de Mayo de 2024</small></p>
+                                    <h5 class="card-title"
+                                        title="Renovación de la Cancha en el Sector Boconó: Rescate y Embellecimiento Deportivo">
+                                        Renovación de la Cancha en el Sector Boconó: Rescate y Embellecimiento Deportivo
+                                    </h5>
+                                    <p class="card-text descripcion oculto"
+                                        title="Descripción de la renovación de la cancha">La Fundación Jaimes Chía se
+                                        complace en anunciar la exitosa renovación de la cancha en el sector Boconó, una
+                                        transformación que ha devuelto vida y vitalidad a este espacio deportivo tan
+                                        querido por la comunidad local. Este proyecto integral incluyó la pintura de
+                                        paredes, el arreglo de la zona de la cancha deportiva y la recuperación de los
+                                        espacios verdes circundantes.</p>
+                                    <p class="card-text" title="Categoria: Comunidad"><strong>Categoría:</strong>
+                                        Comunidad</p>
+                                    <a class="btn mostrar-descripcion" title="Leer noticia completa">Leer noticia
+                                        completa</a>
+                                    <p class="card-text mt-2"><small class="text-body-secondary">15 de Mayo de
+                                            2024</small></p>
                                 </div>
                                 <div class="card-footer">
                                     <span>Compártenos:</span>
-                                    <a href="#" class="btn"><i class="fab fa-facebook"></i></a>
-                                    <a href="#" class="btn"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#" class="btn"><i class="fab fa-twitter"></i></a>
-                                    <!-- Agrega más botones de redes sociales según sea necesario -->
+                                    <a href="#" class="btn compartir-facebook" title="Compartir en Facebook"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a href="#" class="btn compartir-whatsapp" title="Compartir en WhatsApp"><i
+                                            class="fab fa-whatsapp"></i></a>
+                                    <a href="#" class="btn compartir-twitter" title="Compartir en Twitter"><i
+                                            class="fab fa-twitter"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="card mb-4 filtro-todos filtro-social" id="noticia_4" data-aos="zoom-out">
-                                <img src="./assets/images/blog/noticias/noticia_4.jpg" class="card-img-top img-fluid" alt="Placeholder">
+                                <img src="./assets/images/blog/noticias/noticia_4.jpg" class="card-img-top img-fluid"
+                                    alt="Imagen representativa de la alegría y diversión en el barrio Aniversario"
+                                    title="Imagen representativa de la alegría y diversión en el barrio Aniversario">
                                 <div class="card-body">
-                                    <h5 class="card-title">Alegría y Diversión en el Barrio Aniversario: Una Tarde Mágica para los Niños</h5>
-                                    <p class="card-text descripcion oculto">a Fundación Jaimes Chía iluminó el Barrio Aniversario con una tarde llena de risas y emoción para los más pequeños de la comunidad. En la emblemática cancha arcoíris del Barrio La Libertad, los niños disfrutaron de una variedad de actividades diseñadas especialmente para ellos.Desde emocionantes funciones de títeres hasta divertidas sesiones de bailoterapia, pasando por proyecciones de cine al aire libre, cada momento fue una oportunidad para la alegría y el entretenimiento. Además, se creó un espacio participativo y social donde los niños pudieron expresarse, compartir y hacer nuevos amigos.</p>
-                                    <p class="card-text"><strong>Categoría:</strong> Social</p>
-                                    <!-- Aquí está la categoría -->
-                                    <a class="btn mostrar-descripcion">Leer noticia completa</a>
-                                    <p class="card-text mt-2"><small class="text-body-secondary">15 de Mayo de 2024</small></p>
+                                    <h5 class="card-title"
+                                        title="Alegría y Diversión en el Barrio Aniversario: Una Tarde Mágica para los Niños">
+                                        Alegría y Diversión en el Barrio Aniversario: Una Tarde Mágica para los Niños
+                                    </h5>
+                                    <p class="card-text descripcion oculto"
+                                        title="Descripción del evento de diversión para niños">La Fundación Jaimes Chía
+                                        iluminó el Barrio Aniversario con una tarde llena de risas y emoción para los
+                                        más pequeños de la comunidad. En la emblemática cancha arcoíris del Barrio La
+                                        Libertad, los niños disfrutaron de una variedad de actividades diseñadas
+                                        especialmente para ellos. Desde emocionantes funciones de títeres hasta
+                                        divertidas sesiones de bailoterapia, pasando por proyecciones de cine al aire
+                                        libre, cada momento fue una oportunidad para la alegría y el entretenimiento.
+                                        Además, se creó un espacio participativo y social donde los niños pudieron
+                                        expresarse, compartir y hacer nuevos amigos.</p>
+                                    <p class="card-text" title="Categoria: Social"><strong>Categoría:</strong> Social
+                                    </p>
+                                    <a class="btn mostrar-descripcion" title="Leer noticia completa">Leer noticia
+                                        completa</a>
+                                    <p class="card-text mt-2"><small class="text-body-secondary">15 de Mayo de
+                                            2024</small></p>
                                 </div>
                                 <div class="card-footer">
                                     <span>Compártenos:</span>
-                                    <a href="#" class="btn"><i class="fab fa-facebook"></i></a>
-                                    <a href="#" class="btn"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#" class="btn"><i class="fab fa-twitter"></i></a>
-                                    <!-- Agrega más botones de redes sociales según sea necesario -->
+                                    <a href="#" class="btn compartir-facebook" title="Compartir en Facebook"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a href="#" class="btn compartir-whatsapp" title="Compartir en WhatsApp"><i
+                                            class="fab fa-whatsapp"></i></a>
+                                    <a href="#" class="btn compartir-twitter" title="Compartir en Twitter"><i
+                                            class="fab fa-twitter"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -163,30 +233,33 @@
                 </div>
             </div>
         </section>
+        <!-- Fin de Sesión de Blog -->
     </main>
+
     <!-- Inicio de Boton de Discapacidad -->
     <div id="discapacidad-componente"></div>
     <!-- Fin de Boton de Discapacidad -->
+
     <!-- Inicio de Boton de Donacion -->
     <div id="donacion-componente"></div>
     <!-- Inicio de Boton de Donacion -->
+
     <!-- Inicio de Footer -->
     <footer id="footer-componente"></footer>
     <!-- Fin de Footer -->
+
     <!-- SCRIPTS -->
     <!-- JS BLOG -->
     <script src="./assets/js/viewdescription.js"></script>
     <!-- JS COMPONENTES -->
     <script src="./assets/js/components.js"></script>
     <!-- JS BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="./bootstrap-5.3.3/dist/js/bootstrap.bundle.js"></script>
     <!-- JS AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
-            easing:'ease-in-out',
+            easing: 'ease-in-out',
             duration: 1200,
             once: true
         });

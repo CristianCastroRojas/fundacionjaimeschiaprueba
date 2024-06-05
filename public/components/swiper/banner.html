@@ -1,58 +1,60 @@
-    <!-- Banner-Swiper -->
-    <div class="swiper" id="banner-componente">
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <video autoplay loop muted>
-                    <source src="./assets/images/inicio/slider/Niños_Jugando_Pelotas.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="swiper-slide">
-                <img src="./assets/images/inicio/slider/slider_1.jpg" alt="" class="kenburns-top" />
-                <div class="slide-text">
-                    <h2>Uniendo Corazones, transformando vidas</h2>
-                    <p>En la Fundación Jaimes Chía, creemos en el poder de la comunidad para marcar una diferencia. </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="./assets/images/inicio/slider/slider_2.jpg" alt="" class="kenburns-top" />
-                <div class="slide-text">
-                    <h2>Educación: la clave del futuro</h2>
-                    <p>En la Fundación Jaimes Chía, creemos que la educación es la clave para un futuro prometedor.</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="./assets/images/inicio/slider/slider_3.jpg"
-                    alt="" class="kenburns-top" />
-                <div class="slide-text">
-                    <h2>Alimentando esperanzas, nutriendo sueños</h2>
-                    <p>Nuestra misión más allá de proporcionar alimentos; se trata de alimentar esperanzas y nutrir sueños.</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="./assets/images/inicio/slider/slider_4.jpg" alt="" class="kenburns-top" />
-                <div class="slide-text">
-                    <h2>Cuidando nuestros mayores, honrando su Legado</h2>
-                    <p>Reconocemos la importancia de cuidar a nuestros mayores y honrar su legado.</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="./assets/images/inicio/slider/slider_5.jpg" alt="" class="kenburns-top" />
-                <div class="slide-text">
-                    <h2>Un futuro mejor comienza hoy</h2>
-                    <p>En la Fundación Jaimes Chía, creemos en el poder de la acción para construir un futuro mejor.</p>
-                </div>
-            </div>
-            ...
+<div class="swiper" id="banner-componente" aria-label="Banner con imágenes y videos de la Fundación Jaimes Chía">
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide" aria-label="Video de niños jugando con pelotas">
+            <video autoplay loop muted aria-label="Video de niños jugando con pelotas">
+                <source src="./assets/images/inicio/slider/Niños_Jugando_Pelotas.mp4" type="video/mp4">
+            </video>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
+        <div class="swiper-slide" aria-label="Uniendo Corazones, transformando vidas">
+            <img src="./assets/images/inicio/slider/slider_1.jpg" alt="Imagen de niños felices" class="kenburns-top" />
+            <div class="slide-text">
+                <h2>Uniendo Corazones, transformando vidas</h2>
+                <p>En la Fundación Jaimes Chía, creemos en el poder de la comunidad para marcar una diferencia.</p>
+            </div>
+        </div>
+        <div class="swiper-slide" aria-label="Educación: la clave del futuro">
+            <img src="./assets/images/inicio/slider/slider_2.jpg" alt="Imagen de niños estudiando"
+                class="kenburns-top" />
+            <div class="slide-text">
+                <h2>Educación: la clave del futuro</h2>
+                <p>En la Fundación Jaimes Chía, creemos que la educación es la clave para un futuro prometedor.</p>
+            </div>
+        </div>
+        <div class="swiper-slide" aria-label="Alimentando esperanzas, nutriendo sueños">
+            <img src="./assets/images/inicio/slider/slider_3.jpg" alt="Imagen de niños recibiendo alimentos"
+                class="kenburns-top" />
+            <div class="slide-text">
+                <h2>Alimentando esperanzas, nutriendo sueños</h2>
+                <p>Nuestra misión más allá de proporcionar alimentos; se trata de alimentar esperanzas y nutrir sueños.
+                </p>
+            </div>
+        </div>
+        <div class="swiper-slide" aria-label="Cuidando nuestros mayores, honrando su Legado">
+            <img src="./assets/images/inicio/slider/slider_4.jpg" alt="Imagen de ancianos recibiendo cuidados"
+                class="kenburns-top" />
+            <div class="slide-text">
+                <h2>Cuidando nuestros mayores, honrando su Legado</h2>
+                <p>Reconocemos la importancia de cuidar a nuestros mayores y honrar su legado.</p>
+            </div>
+        </div>
+        <div class="swiper-slide" aria-label="Un futuro mejor comienza hoy">
+            <img src="./assets/images/inicio/slider/slider_5.jpg" alt="Imagen de una familia feliz"
+                class="kenburns-top" />
+            <div class="slide-text">
+                <h2>Un futuro mejor comienza hoy</h2>
+                <p>En la Fundación Jaimes Chía, creemos en el poder de la acción para construir un futuro mejor.</p>
+            </div>
+        </div>
     </div>
-    <!-- Fin de Banner-Swiper -->
+
+    <!-- If we need pagination -->
+    <div class="swiper-pagination" aria-label="Paginación del banner"></div>
+
+    <!-- If we need navigation buttons -->
+    <button class="swiper-button-prev" aria-label="Botón anterior" title="Anterior"></button>
+    <button class="swiper-button-next" aria-label="Botón siguiente" title="Siguiente"></button>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar" aria-label="Barra de desplazamiento del banner"></div>
+</div>

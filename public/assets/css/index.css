@@ -1,6 +1,7 @@
+/* Importación de estilos externos */
 @import url(style.css);
 
-/* -----------------------inicio de Estilos Hastag Sesion 1---------------------------------- */
+/* ----------------------- Estilos Hastag Sesión 1 ----------------------- */
 .hastag-seccion {
     width: 100%;
     margin-top: 20px;
@@ -13,10 +14,9 @@
     font-weight: 500;
     text-transform: uppercase;
 }
-/* ------------------------Fin de Estilos Hastag Sesion 1------------------------------------- */
 
-/* -------------------Inicio de Estilos Informacion Seccion------------------------------------ */
-.informacion-sesion {
+/* ------------------------ Estilos Información Sección ------------------------ */
+.informacion-seccion {
     margin-top: 20px;
     padding: 20px;
 }
@@ -26,7 +26,7 @@
     height: auto;
     max-width: 600px;
     border-radius: 30px;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 10);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
 }
 
 .informacion-titulo {
@@ -55,12 +55,9 @@
     font-size: 18px;
     color: #FFFFFF;
     background-color: #4cbb5f;
-    transition: 0.3s;
 }
 
-/* --------------------Fin de Estilos Informacion Seccion--------------------------------- */
-
-/* -------------------Inicio de Estilos Impacto Seccion----------------------------------- */
+/* -------------------- Estilos Impacto Sección -------------------- */
 .impacto-seccion {
     background-color: #f8f9fa;
     height: auto;
@@ -95,27 +92,26 @@
     font-weight: bold;
 }
 
-.impacto-counter{
+.impacto-counter {
     font-size: 30px;
     font-weight: 600;
 }
-/* --------------------------------------Fin de Estilos Impacto Seccion------------------------------ */
 
-/* --------------------------------------Inicio de Estilos Donación Seccion ---------------------------*/
+/* -------------------- Estilos Donación Sección -------------------- */
 .donacion-seccion {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     background-color: #f8f9fa;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .donacion-titulo {
     text-align: center;
     font-size: 25px;
     color: #020873;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .donacion-subtitulo {
@@ -140,17 +136,14 @@
     font-size: 18px;
     color: #FFFFFF;
     background-color: #4cbb5f;
-    transition: 0.3s;
 }
 
 .icono-donacion {
     font-size: 20px;
-    margin-right: 5px;/
+    margin-right: 5px;
 }
 
-/* -----------------------------------Fin de Estilos Donación Seccion------------------------------------- */
-
-/* ----------------------------------Inicio de Estilos Noticias Seccion------------------------------------ */
+/* -------------------- Estilos Noticias Sección -------------------- */
 .noticias-seccion {
     margin-top: 10px;
     background-color: #2793F2;
@@ -206,9 +199,7 @@
 .boton-noticias:hover {
     cursor: pointer;
     font-size: 14px;
-    color: #FFFFFF;
     background-color: #4cbb5f;
-    transition: 0.3s;
 }
 
 .card-text {
@@ -216,8 +207,6 @@
     font-size: 12px;
 }
 
-.card{
+.card {
     margin-right: 10px;
 }
-
-/* ------------------------------------Fin de Estilos Noticias Seccion-------------------------- */

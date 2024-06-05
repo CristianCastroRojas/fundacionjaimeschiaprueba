@@ -1,7 +1,6 @@
 @import url(style.css);
 
-/*------------------------- Inicio de Estilos Video -----------------------------*/
-
+/* ------------------------- Inicio de Estilos Video ----------------------------- */
 #video-container {
     position: relative;
     width: 100%;
@@ -20,12 +19,10 @@
     border-radius: 35px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); /* Ajusta el valor de alfa del box-shadow */
 }
+/* ------------------------- Fin de Estilos Video ----------------------------- */
 
-/*------------ --------------------Fin de Estilos Video ---------------------------*/
-
-/* -------------------------Inicio de Estilos Sesion Corporativa-------------- -----------------*/
-
-.corporativo-section{
+/* ------------------------- Inicio de Estilos Sesión Corporativa ----------------------------- */
+.corporativo-section {
     width: 100%;
 }
 
@@ -90,16 +87,16 @@
     color: #FAC128;
     font-size: 50px;
     margin-bottom: 20px;
+    transition: font-size 0.3s; /* Added transition for smooth size change */
 }
 
 .corporativo-icon:hover {
     font-size: 60px;
 }
+/* ------------------------- Fin de Estilos Sesión Corporativa ----------------------------- */
 
-/* --------------------------------Fin de Estilos Seccion Corporativa -----------------------------*/
-
-/* -----------------------------Inicio de Estilos Seccion Equipo---------------------------------- */
-.equipo-seccion{
+/* ----------------------------- Inicio de Estilos Sección Equipo ----------------------------- */
+.equipo-seccion {
     margin-top: 48px;
     width: 100%;
     margin-bottom: 20px;
@@ -110,11 +107,11 @@
     height: 180px;
     border-radius: 50%;
     border: 6px solid #2793f2;
+    transition: transform 0.3s; /* Transition for hover effect */
 }
 
-.equipo-img:hover{
+.equipo-img:hover {
     transform: scale(1.1);
-    transition: all 0.3s;
 }
 
 .equipo-nombre {
@@ -128,4 +125,5 @@
     font-weight: 800;
     color: #000000;
 }
-/* ---------------------------Fin de Estilos Seccion Equipo------------------------------------ */
+/* ----------------------------- Fin de Estilos Sección Equipo ----------------------------- */
+

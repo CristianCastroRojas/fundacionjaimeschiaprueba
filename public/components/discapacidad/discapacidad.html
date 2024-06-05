@@ -1,62 +1,103 @@
 <div class="discapacidad" id="discapacidad-componente">
-    <button class="accessibility-button" id="accessibility-button">
-        <i class="fas fa-universal-access"></i>
+    <button class="accessibility-button" id="accessibility-button" title="Botón de accesibilidad">
+        <i class="fas fa-universal-access" aria-hidden="true"></i>
     </button>
-    
+
     <div class="accessibility-panel" id="accessibility-panel">
-        <button id="increase-font"><i class="fas fa-plus"></i><span>Aumentar fuente</span></button>
-        <button id="reset-styles"><i class="fas fa-undo"></i><span>Reestablecer</span></button>
-        <button id="decrease-font"><i class="fas fa-minus"></i><span>Disminuir fuente</span></button>
-        <button id="toggle-contrast"><i class="fas fa-adjust"></i><span>Contraste</span></button>
-        <button id="toggle-cursor"><i class="fas fa-search-plus"></i><span>Aumentar Contenido</span></button>
-        <button id="toggle-narrator"><i class="fas fa-headphones"></i><span>Narrador</span></button>
-        <button id="translate"><i class="fas fa-language"></i><span>Traducir</span></button>
-    </div> 
+        <button id="increase-font" title="Aumentar tamaño de la fuente">
+            <i class="fas fa-plus" aria-hidden="true"></i>
+            <span>Aumentar fuente</span>
+        </button>
+        <button id="reset-styles" title="Restablecer estilos">
+            <i class="fas fa-undo" aria-hidden="true"></i>
+            <span>Restablecer</span>
+        </button>
+        <button id="decrease-font" title="Disminuir tamaño de la fuente">
+            <i class="fas fa-minus" aria-hidden="true"></i>
+            <span>Disminuir fuente</span>
+        </button>
+        <button id="toggle-contrast" title="Alternar contraste">
+            <i class="fas fa-adjust" aria-hidden="true"></i>
+            <span>Contraste</span>
+        </button>
+        <button id="toggle-cursor" title="Aumentar contenido de la pantalla">
+            <i class="fas fa-search-plus" aria-hidden="true"></i>
+            <span>Aumentar Contenido</span>
+        </button>
+        <button id="toggle-narrator" title="Alternar narrador">
+            <i class="fas fa-headphones" aria-hidden="true"></i>
+            <span>Narrador</span>
+        </button>
+    </div>
 </div>
 
-<!-- Div para el widget de Google Translate, inicialmente oculto -->
+<div id="translate-button">
+    <button id="translate" title="Traducir página">
+        <i class="fas fa-language" aria-hidden="true"></i>
+    </button>
+    <div class="translate-options" style="display: none;">
+        <button class="translate-option" onclick="changeLanguage('es')" data-lang="es" title="Español">
+            <img src="./assets/images/banderas/Spain_Flag.png" alt="Bandera de España">
+        </button>
+        <button class="translate-option" onclick="changeLanguage('en')" data-lang="en" title="Inglés">
+            <img src="./assets/images/banderas/English_Flag.png" alt="Bandera de Inglaterra">
+        </button>
+        <button class="translate-option" onclick="changeLanguage('fr')" data-lang="fr" title="Francés">
+            <img src="./assets/images/banderas/France_Flag.png" alt="Bandera de Francia">
+        </button>
+        <button class="translate-option" onclick="changeLanguage('de')" data-lang="de" title="Alemán">
+            <img src="./assets/images/banderas/Germany_Flag.png" alt="Bandera de Alemania">
+        </button>
+        <button class="translate-option" onclick="changeLanguage('zh-CN')" data-lang="zh" title="Chino">
+            <img src="./assets/images/banderas/Chinese_Flag.png" alt="Bandera de China">
+        </button>
+    </div>
+</div>
+
 <div id="google_translate_element" style="display: none;"></div>
 
-<script type="text/javascript">
-    var translateWidgetVisible = false;
+<script>
 
+    // Función que oculta las opciones de traducción al cargar el contenido de la página
+    document.addEventListener('DOMContentLoaded', function () {
+        var translateOptions = document.querySelector('.translate-options');
+        translateOptions.style.display = 'none';
+    });
+
+    // Evento para mostrar u ocultar las opciones de traducción al hacer clic en el botón de traducción
+    document.getElementById('translate').addEventListener('click', function () {
+        var translateOptions = document.querySelector('.translate-options');
+        translateOptions.style.display = (translateOptions.style.display === 'none') ? 'flex' : 'none';
+    });
+
+    // Función para cargar el script de la API de Google Translate
+    function loadGoogleTranslateScript() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        document.body.appendChild(script);
+    }
+
+    // Llamada para cargar el script de Google Translate al cargar la página
+    loadGoogleTranslateScript();
+
+    // Función para inicializar la barra de traducción de Google
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
-            pageLanguage: 'es', 
-            includedLanguages: 'en,es,fr,de,it,pt'
+            pageLanguage: 'es', // Idioma de la página original: Español
+            includedLanguages: 'es,en,fr,de,zh-CN', // Idiomas a incluir: Inglés, Francés, Alemán, Chino
+            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+            autoDisplay: false
         }, 'google_translate_element');
     }
 
-    (function() {
-        var gtScript = document.createElement('script');
-        gtScript.type = 'text/javascript';
-        gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(gtScript, s);
-    })();
-
-    document.getElementById('translate').addEventListener('click', function() {
-        var translateElement = document.getElementById('google_translate_element');
-
-        if (!translateWidgetVisible) {
-            translateElement.style.display = 'none';
-            translateWidgetVisible = true;
-
-            setTimeout(function() {
-                var selectElement = translateElement.querySelector('select');
-                if (selectElement) {
-                    selectElement.value = 'en';
-                    selectElement.dispatchEvent(new Event('change'));
-                }
-            }, 500);
-        } else {
-            translateElement.style.display = 'none';
-            translateWidgetVisible = false;
+    // Función para cambiar el idioma de traducción
+    function changeLanguage(langCode) {
+        var googleTranslateElement = document.querySelector(".goog-te-combo");
+        if (googleTranslateElement) {
+            googleTranslateElement.value = langCode;
+            googleTranslateElement.dispatchEvent(new Event('change'));
         }
-    });
+    }
 
 </script>
-
-
-
-
