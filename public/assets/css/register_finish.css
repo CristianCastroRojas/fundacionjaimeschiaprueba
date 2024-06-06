@@ -1,0 +1,39 @@
+@import url(style.css);
+
+.registro-section{
+    background-color: #FFF;
+}
+
+.card{
+    color: #FFF;
+    border-radius: 30px;
+    border: 1px solid red;
+}
+
+.card-title{
+    font-size: 25px;
+    color: #020873;
+}
+
+.card-text{
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.button-retorno{
+    font-size: 15px;
+    border: none;
+    background-color: #2793F2;
+    color: #000000;
+    border-radius: 30px;
+    padding: 15px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.button-retorno:hover {
+    background-color: #1e7cd2;
+    color: #ffffff;
+}

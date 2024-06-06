@@ -501,6 +501,36 @@ body {
         right: 165px;
     }
 
+    /* Ajustes para la pagina de donaciones */
+
+    .realizar-donacion-section {
+            padding: 0 20px; /* Ajusta el espaciado para pantallas más grandes */
+    }
+    
+    .realizar-donacion-section .titulo-realizar-donacion {
+            font-size: 25px; /* Ajusta el tamaño del título */
+    }
+    
+    .realizar-donacion-section .subtitulo-realizar-donacion {
+            font-size: 18px; /* Ajusta el tamaño del subtítulo */
+    }
+        
+    .realizar-donacion-section .card-title {
+            font-size: 25px; /* Ajusta el tamaño del título de la tarjeta */
+    }
+    
+    .realizar-donacion-section .card-text {
+            font-size: 18px; /* Ajusta el tamaño del texto de la tarjeta */
+    }
+    
+    .realizar-donacion-section .boton-paypal,
+    .realizar-donacion-section .boton-wompi,
+    .realizar-donacion-section .boton-whatsapp {
+            font-size: 18px; /* Ajusta el tamaño de los botones */
+            padding: 12px 25px; /* Ajusta el espaciado de los botones */
+    }
+        
+        
 }
 
 
@@ -999,6 +1029,35 @@ body {
 
     .discapcidad #accessibility-button.active {
         right: 145px;
+    }
+
+    /* Ajustes para la pagina de donaciones */
+
+    .realizar-donacion-section {
+        padding: 0 20px; /* Ajusta el espaciado para pantallas más grandes */
+    }
+
+    .realizar-donacion-section .titulo-realizar-donacion {
+        font-size: 20px; /* Ajusta el tamaño del título */
+    }
+
+    .realizar-donacion-section .subtitulo-realizar-donacion {
+        font-size: 14px; /* Ajusta el tamaño del subtítulo */
+    }
+    
+    .realizar-donacion-section .card-title {
+        font-size: 20px; /* Ajusta el tamaño del título de la tarjeta */
+    }
+
+    .realizar-donacion-section .card-text {
+        font-size: 14px; /* Ajusta el tamaño del texto de la tarjeta */
+    }
+
+    .realizar-donacion-section .boton-paypal,
+    .realizar-donacion-section .boton-wompi,
+    .realizar-donacion-section .boton-whatsapp {
+        font-size: 14px; /* Ajusta el tamaño de los botones */
+        padding: 10px 15px; /* Ajusta el espaciado de los botones */
     }
 }
 

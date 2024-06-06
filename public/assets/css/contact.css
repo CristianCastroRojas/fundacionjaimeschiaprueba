@@ -109,4 +109,13 @@
     background-color: #4cbb5f;
 }
 
+/* Estilos para la validacion de formulario */
+
+.was-validated .form-control:invalid, .form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.was-validated .form-control:valid, .form-control.is-valid {
+    border-color: #28a745;
+}
 /* ------------------ Fin de estilos para sección de Contacto -------------------------- */

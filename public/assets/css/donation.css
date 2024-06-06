@@ -1,0 +1,109 @@
+@import url(style.css);
+
+.realizar-donacion-section{
+    background-color: #FFF;
+}
+
+.titulo-realizar-donacion{
+    color: #020873;
+    font-size: 30px;
+}
+
+.subtitulo-realizar-donacion{
+    color: #000000;
+    font-size: 25px;
+}
+
+/* Estilos para las tarjetas */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centra verticalmente el contenido */
+    align-items: center;
+    /* Centra horizontalmente el contenido */
+    text-align: center;
+    /* Alinea el texto al centro */
+}
+
+.card-title{
+    color: #020873;
+    font-size: 25px;
+}
+
+.card-text{
+    color: #000000;
+    font-size: 15px;
+}
+
+
+/* Estilos para la imagen de PayPal */
+.img-paypal {
+    max-height: 150px;
+    /* Establece la altura máxima para la imagen de PayPal */
+    width: auto;
+    /* Ajusta automáticamente el ancho para mantener la proporción */
+}
+
+/* Estilos para la imagen de Wompi */
+.img-wompi {
+    max-height: 150px;
+    /* Establece la altura máxima para la imagen de Wompi */
+    width: auto;
+    /* Ajusta automáticamente el ancho para mantener la proporción */
+}
+
+/* Estilos para la imagen de Donación en Especie */
+.img-especie {
+    max-height: 150px;
+    /* Establece la altura máxima para la imagen de Donación en Especie */
+    width: 150px;
+    /* Ajusta automáticamente el ancho para mantener la proporción */
+}
+
+.boton-paypal{
+    font-size: 15px;
+    background-color: #2793F2;
+    border-radius: 30px;
+    color: #FFF;
+    padding: 15px;
+    text-decoration: none;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.boton-paypal:hover{
+    background-color: #020873;
+}
+
+.boton-wompi{
+    font-size: 15px;
+    background-color: #B0F2AE;
+    border-radius: 30px;
+    color: #000000;
+    padding: 15px;
+    text-decoration: none;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.boton-wompi:hover{
+    background-color: #00825A;
+}
+
+.boton-whatsapp{
+    font-size: 15px;
+    background-color: #25D366;
+    border-radius: 30px;
+    color: #000000;
+    padding: 15px;
+    text-decoration: none;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.boton-whatsapp:hover{
+    color: #FFF;
+    background-color: #000000;
+}
+
