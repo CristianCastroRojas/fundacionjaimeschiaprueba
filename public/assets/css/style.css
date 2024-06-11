@@ -13,6 +13,26 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+/* ----Personalizacion barra de desplamiento---- */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2793F2;
+    border-radius: 10px; 
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Para navegadores basados en Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #2793F2 #FFF;
+}
 
 /* *************************************MediaQuerys Responsive********************************************* */
 
@@ -529,7 +549,36 @@ body {
             font-size: 18px; /* Ajusta el tamaño de los botones */
             padding: 12px 25px; /* Ajusta el espaciado de los botones */
     }
-        
+    
+    /* Ajustes para la pagina de terminos y condiciones */
+    /* Ajustes para la pagina de política de tratamiento de datos */
+
+    .terminos-section,
+    .politica-section{
+        padding: 0 20px;
+    }
+
+    .terminos-section .terminos-titulo,
+    .politica-section .politica-titulo{
+        font-size: 25px;
+    }
+
+    .terminos-section .item-terminos-lista li,
+    .terminos-section .item-terminos-lista,
+    .terminos-section .item-parrafo,
+    .terminos-section .item-terminos
+    .politica-section .item-politica-lista li,
+    .politica-section .item-politica-lista,
+    .politica-section .item-parrafo,
+    .politica-section .item-politica{
+        font-size: 18px;
+    }
+
+    .terminos-section .boton-aviso,
+    .politica-section .boton-politica{
+        font-size: 18px;
+        padding: 12px 25px;
+    }
         
 }
 
@@ -1058,6 +1107,36 @@ body {
     .realizar-donacion-section .boton-whatsapp {
         font-size: 14px; /* Ajusta el tamaño de los botones */
         padding: 10px 15px; /* Ajusta el espaciado de los botones */
+    }
+
+    /* Ajustes para la pagina de terminos y condiciones */
+    /* Ajustes para la pagina de política de tratamiento de datos */
+
+    .terminos-section,
+    .politica-section{
+        padding: 0 20px;
+    }
+
+    .terminos-section .terminos-titulo,
+    .politica-section .politica-titulo{
+        font-size: 20px;
+    }
+
+    .terminos-section .item-terminos-lista li,
+    .terminos-section .item-terminos-lista,
+    .terminos-section .item-parrafo,
+    .terminos-section .item-terminos
+    .politica-section .item-politica-lista li,
+    .politica-section .item-politica-lista,
+    .politica-section .item-parrafo,
+    .politica-section .item-politica{
+        font-size: 14px;
+    }
+
+    .terminos-section .boton-aviso,
+    .politica-section .boton-politica{
+        font-size: 14px;
+        padding: 10px 15px;
     }
 }
 

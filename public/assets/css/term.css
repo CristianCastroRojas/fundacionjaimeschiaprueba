@@ -1,0 +1,69 @@
+@import url(style.css);
+
+.politica-section,
+.terminos-section{
+    background-color: #FFF;
+    text-align: justify;
+}
+
+.politica-titulo,
+.terminos-titulo{
+    color: #020873;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.item-politica,
+.item-terminos{
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.item-parrafo{
+    color: #000000;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+.item-politica-lista li,
+.item-terminos-lista li{
+    color: #000000;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.item-politica-lista a,
+.item-terminos-lista a{
+    color:#000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.item-politica-lista a:hover,
+.item-terminos-lista a:hover {
+    color: #2793F2;
+    text-decoration: underline;
+}
+
+/* Estilos para el botón de descarga */
+.boton-politica,
+.boton-aviso {
+    display: inline-block;
+    padding: 15px;
+    background-color: #2793F2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+}
+
+.boton-politica:hover,
+.boton-aviso:hover {
+    color: #000000;
+    background-color: #F4C128;
+}

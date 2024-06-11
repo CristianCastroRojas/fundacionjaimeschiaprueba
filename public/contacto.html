@@ -62,13 +62,14 @@
                                     class="fas fa-map-marker-alt"></i> Calle 18a # 12-05 Barrio La Libertad - Cúcuta, N.
                                 de Santander</p>
                             <p class="contact-info-parrafo" title="Correo Electrónico"><i class="fas fa-envelope"></i>
-                                Correo Electrónico: <a href="mailto:info@fundacionxyz.com"
+                                Correo Electrónico: <a href="mailto:fundacionjaimeschia2017@gmail.com"
                                     title="Enviar correo a fundacionjaimeschia2017@gmail.com">fundacionjaimeschia2017@gmail.com</a>
                             </p>
                             <p class="contact-info-parrafo" title="Teléfono"><i class="fas fa-phone"></i> Teléfono: <a
                                     href="tel:6015281497" title="Llamar al (601)5281497">(601)5281497</a></p>
                             <p class="contact-info-parrafo" title="Celular"><i class="fas fa-mobile-retro"></i> Celular:
-                                <a href="tel:+573203678877" title="Llamar al +57 3203678877">+57 3203678877</a></p>
+                                <a href="tel:+573203678877" title="Llamar al +57 3203678877">+57 3203678877</a>
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-6 mb-5" data-aos="fade-down">
@@ -88,7 +89,7 @@
                                 necesitan.</p>
                             <p class="donacion-info-parrafo" title="Puedes hacerlo de dos maneras">¿Quieres marcar un
                                 impacto real? Puedes hacerlo de dos maneras:</p>
-                            <ul>
+                            <ul class="donacion-lista">
                                 <li
                                     title="Realiza una donación en línea a través de nuestro sitio web y únete a nuestro esfuerzo por un mundo mejor">
                                     Realiza una donación en línea a través de nuestro sitio web y únete a nuestro
@@ -111,52 +112,53 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="contact-form">
-                             <!-- Título del formulario -->
+                            <!-- Título del formulario -->
                             <h3 class="text-center" title="Formulario de Contacto">Formulario de Contacto</h3>
                             <!-- Inicio del formulario -->
-                            <form id="contactForm" class="needs-validation" novalidate method="post">
+                            <form id="contactForm" class="needs-validation" novalidate method="post"
+                                action="../backend/procesar_fomulario.php">
                                 <div class="row">
                                     <!-- Campo de entrada para el nombre -->
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="nombre" title="Nombre">Nombre:</label>
-                                            <input type="text" class="form-control" id="nombre"
-                                                placeholder="Ingrese su nombre" title="Ingrese su nombre" required>
+                                            <input type="text" class="form-control" id="nombre" name="nombre"
+                                                placeholder="Ingrese su nombre" title="Ingrese su nombre" required autocomplete="off">
                                             <div class="invalid-feedback">
                                                 Por favor, ingrese su nombre.
                                             </div>
                                         </div>
                                     </div>
-                                     <!-- Campo de entrada para el apellido -->
+                                    <!-- Campo de entrada para el apellido -->
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="apellido" title="Apellido">Apellido:</label>
-                                            <input type="text" class="form-control" id="apellido"
-                                                placeholder="Ingrese su apellido" title="Ingrese su apellido" required>
+                                            <input type="text" class="form-control" id="apellido" name="apellido"
+                                                placeholder="Ingrese su apellido" title="Ingrese su apellido" required autocomplete="off">
                                             <div class="invalid-feedback">
                                                 Por favor, ingrese su apellido.
                                             </div>
                                         </div>
                                     </div>
-                                     <!-- Campo de entrada para el correo electrónico -->
+                                    <!-- Campo de entrada para el correo electrónico -->
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="email" title="Correo Electrónico">Correo Electrónico:</label>
-                                            <input type="email" class="form-control" id="email"
+                                            <input type="email" class="form-control" id="email" name="email"
                                                 placeholder="Ingrese su correo electrónico"
-                                                title="Ingrese su correo electrónico" required>
+                                                title="Ingrese su correo electrónico" required autocomplete="off">
                                             <div class="invalid-feedback">
                                                 Por favor, ingrese un correo electrónico válido.
                                             </div>
                                         </div>
                                     </div>
-                                     <!-- Campo de entrada para el número de celular -->
+                                    <!-- Campo de entrada para el número de celular -->
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="celular" title="Celular">Celular:</label>
-                                            <input type="tel" class="form-control" id="celular"
+                                            <input type="tel" class="form-control" id="celular" name="celular"
                                                 placeholder="Ingrese su número de celular"
-                                                title="Ingrese su número de celular" required>
+                                                title="Ingrese su número de celular" required autocomplete="off">
                                             <div class="invalid-feedback">
                                                 Por favor, ingrese su número de celular.
                                             </div>
@@ -167,7 +169,7 @@
                                         <div class="form-group">
                                             <label for="tipo_documento" title="Tipo de Documento">Tipo de
                                                 Documento:</label>
-                                            <select class="form-control" id="tipo_documento"
+                                            <select class="form-control" id="tipo_documento" name="tipo_documento"
                                                 title="Seleccione el tipo de documento" required>
                                                 <option value="" disabled selected>Seleccione el tipo de documento
                                                 </option>
@@ -187,32 +189,32 @@
                                         <div class="form-group">
                                             <label for="documento" title="Número de Documento">Número de
                                                 Documento:</label>
-                                            <input type="text" class="form-control" id="documento"
+                                            <input type="text" class="form-control" id="documento" name="documento"
                                                 placeholder="Ingrese su número de documento"
-                                                title="Ingrese su número de documento" required>
+                                                title="Ingrese su número de documento" required autocomplete="off">
                                             <div class="invalid-feedback">
                                                 Por favor, ingrese su número de documento.
                                             </div>
                                         </div>
                                     </div>
-                                     <!-- Campo de entrada para la ciudad -->
+                                    <!-- Campo de entrada para la ciudad -->
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="ciudad" title="Ciudad">Ciudad:</label>
-                                            <input type="text" class="form-control" id="ciudad"
-                                                placeholder="Ingrese su ciudad" title="Ingrese su ciudad" required>
+                                            <input type="text" class="form-control" id="ciudad" name="ciudad"
+                                                placeholder="Ingrese su ciudad" title="Ingrese su ciudad" required autocomplete="off">
                                             <div class="invalid-feedback">
                                                 Por favor, ingrese su ciudad.
                                             </div>
                                         </div>
                                     </div>
-                                     <!-- Campo de entrada para la dirección -->
+                                    <!-- Campo de entrada para la dirección -->
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="direccion" title="Dirección">Dirección:</label>
-                                            <input type="text" class="form-control" id="direccion"
+                                            <input type="text" class="form-control" id="direccion" name="direccion"
                                                 placeholder="Ingrese su dirección" title="Ingrese su dirección"
-                                                required>
+                                                required autocomplete="off">
                                             <div class="invalid-feedback">
                                                 Por favor, ingrese su dirección.
                                             </div>
@@ -223,8 +225,8 @@
                                         <div class="form-group">
                                             <label for="interes" title="Selecciona tu interés">Selecciona tu
                                                 interés:</label>
-                                            <select class="form-control" id="interes" title="Seleccione su interés"
-                                                required>
+                                            <select class="form-control" id="interes" name="interes"
+                                                title="Seleccione su interés" required>
                                                 <option value="" disabled selected>Seleccione su interés</option>
                                                 <option title="Deseo realizar una donación monetaria">Deseo realizar una
                                                     donación monetaria</option>
@@ -242,12 +244,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <!-- Campo de texto para el mensaje o consulta -->
+                                <!-- Campo de texto para el mensaje o consulta -->
                                 <div class="form-group">
                                     <label for="mensaje" title="Mensaje o Consulta">Mensaje o Consulta:</label>
-                                    <textarea class="form-control" id="mensaje" rows="5"
+                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="5"
                                         placeholder="Escribe tu mensaje o consulta aquí"
-                                        title="Escribe tu mensaje o consulta aquí" required></textarea>
+                                        title="Escribe tu mensaje o consulta aquí" required autocomplete="off"></textarea>
                                     <div class="invalid-feedback">
                                         Por favor, ingrese su mensaje o consulta.
                                     </div>
@@ -257,11 +259,13 @@
                                 <!-- Campo de aceptación del tratamiento de datos -->
                                 <div class="form-group form-check">
                                     <input type="checkbox" class="form-check-input" id="autorizacion"
-                                        title="Autorización de tratamiento de datos" required>
+                                        name="autorizacion" title="Autorización de tratamiento de datos" required>
                                     <label class="form-check-label" for="autorizacion"
                                         title="Autorizo a la Fundación Jaimes Chia al tratamiento de mis datos personales conforme a la política de tratamiento de datos">Autorizo
                                         a la Fundación Jaimes Chia al tratamiento de mis datos personales conforme a la
-                                        política de tratamiento de datos.</label>
+                                        <a href="./politica_tratamiento_datos.html" target="_blank"
+                                            title="Ir a la política de tratamiento de datos">política de tratamiento de
+                                            datos.</a></label>
                                     <div class="invalid-feedback">
                                         Debe autorizar el tratamiento de datos.
                                     </div>
@@ -307,6 +311,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- JS VALIDACION DE FORMULARIO -->
     <script src="./assets/js/contact-validation.js"></script>
+    
 </body>
 
 </html>

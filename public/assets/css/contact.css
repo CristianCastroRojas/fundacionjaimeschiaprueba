@@ -23,6 +23,7 @@
     font-size: 25px;
 }
 
+.donacion-lista,
 .contact-info-parrafo,
 .donacion-info-parrafo {
     font-size: 15px;
@@ -38,6 +39,12 @@
 .contact-info-parrafo a {
     text-decoration: none;
     color: #000000;
+    transition: color 0.3s ease;
+}
+
+.contact-info-parrafo a:hover {
+    color: #2793F2;
+    text-decoration: underline;
 }
 
 .contact-info-parrafo i {
@@ -64,6 +71,18 @@
     font-size: 15px;
     margin-top: 5px;
     font-weight: bold;
+}
+
+.contact-form a {
+    color: #020873;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-form a:hover{
+    color: #2793F2;
+    text-decoration: underline;
 }
 
 .contact-form input[type="text"],
