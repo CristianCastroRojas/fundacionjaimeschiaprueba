@@ -131,7 +131,7 @@ html {
 
     /* Ajustes para la pagina de inicio sesion hastag */
 
-    .hastag-seccion p {
+    .hastag-seccion h3 {
         font-size: 4vw; /* Tamaño de fuente basado en el ancho de la ventana */
         /* Limitar el tamaño máximo de fuente */
         font-size: calc(4vw + 2px); /* Tamaño máximo de fuente */
@@ -685,7 +685,7 @@ html {
 
     /* Ajustes para la pagina de inicio sesion hastag */
 
-    .hastag-seccion p {
+    .hastag-seccion h3 {
         font-size: 4vw;
     }
 

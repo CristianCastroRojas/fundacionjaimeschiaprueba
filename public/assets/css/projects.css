@@ -96,6 +96,7 @@ hr {
     padding: 15px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
     transition: all 0.3s;
+    text-decoration: none;
 }
 
 .boton-donacion-proyecto:hover {
